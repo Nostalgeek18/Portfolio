@@ -1,42 +1,118 @@
-export default function About() {
+
+function About({children}) {
     return (
         <section id="about" className="about sec-pad">
             <div className="main-container">
-                <h2 className="heading heading-sec heading-sec__mb-med">
-                <span className="heading-sec__main">About Me</span>
-                <span className="heading-sec__sub">
-                    <p>I'm a frontend developer based out of London, UK. I love building apps that solve real-world problems, and that are delightful to use. My specialities include TypeScript, React JS, Tailwind CSS, and Styled Components.
-                    </p>
-                </span>
-                </h2>
-                <div className="about__content">
-                <div className="about__content-main">
-                    <h3 className="about__content-title">Get to know me!</h3>
-                    <div className="about__content-details">
-                    <p className="about__content-details-para">
-                        My background is in teaching and marketing. I have a bachelors degree in English from Kings College. When I'm not coding, I take care of my five adorable cats.
-                    </p>
-                    </div>
-                    <a href="./#contact" className="btn btn--med btn--theme dynamicBgClr"
-                    >Contact</a
-                    >
-                </div>
-                <div className="about__content-skills">
-                    <h3 className="about__content-title">My Skills</h3>
-                    <div className="skills">
-                    <div className="skills__skill">HTML</div>
-                    <div className="skills__skill">CSS</div>
-                    <div className="skills__skill">JavaScript</div>
-                    <div className="skills__skill">React</div>
-                    <div className="skills__skill">TypeScript</div>
-                    <div className="skills__skill">Git</div>
-                    <div className="skills__skill">Figma</div>
-                    <div className="skills__skill">Tailwind CSS</div>
-                    <div className="skills__skill">Jasmine</div>
-                    </div>
-                </div>
-                </div>
+             {children}
             </div>
         </section>
     )
 }
+
+function ContentTitle({children}) {
+    return (
+        <h3 className="about__content-title">{children}</h3>
+    )
+}
+
+
+function Content({children}) {
+    return (
+        <div className="about__content">
+            {children}
+        </div>
+    )
+}
+
+function ContactDetails({children}) {
+    return (
+        <p className="about__content-details-para">
+         {children}
+        </p>
+    )
+}
+
+function ContactCTA({hrefContact, children}) {
+    return (
+        <a href={hrefContact} className="btn btn--med btn--theme dynamicBgClr">
+            {children}
+        </a>
+    )
+}
+
+function ContentSkills({children}) {
+    return (
+        <div className="about__content-skills">
+            {children}
+         </div>
+    )
+}
+
+function TitleSkills({children}) {
+    return (
+        <h3 className="about__content-title">{children}</h3>
+    )
+}
+
+function SkillsWrapper({children}) {
+    return (
+        <div className="skills">
+            {children}
+        </div>
+    )
+}
+
+function Skill({children}) {
+    return (
+        <div className="skills__skill">
+            {children}
+        </div>
+    )
+}
+
+function Heading({children}) {
+    return (
+        <h2 className="heading heading-sec heading-sec__mb-med">
+            {children}
+        </h2>
+    )
+}
+
+function MainTitle({children}) {
+    return (
+        <span className="heading-sec__main">{children}</span>
+    )
+}
+
+function MainContent({children}) {
+    return (
+        <div className="about__content-main">
+            {children}
+        </div>
+    )
+}
+
+function MainDescription({children}) {
+    return (
+        <span className="heading-sec__sub">
+        <p>
+            {children}
+        </p>
+    </span>
+    )
+}
+
+About.ContentTitle   = ContentTitle
+About.Content        = Content
+About.ContactDetails = ContactDetails
+About.ContactCTA     = ContactCTA
+About.TitleSkills    = TitleSkills
+About.ContentSkills  = ContentSkills
+About.SkillsWrapper  = SkillsWrapper
+About.Skill          = Skill 
+About.Heading        = Heading 
+About.MainContent    = MainContent 
+About.MainDescription = MainDescription
+About.MainTitle      = MainTitle
+
+export { About } 

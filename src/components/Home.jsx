@@ -30,10 +30,10 @@ function HomeContent({children}) {
   )
 }
 
-function HomeCta({children}) {
+function HomeCta({hrefLink, children}) {
   return (
     <div className="home-hero__cta">
-      <a href="./#projects" className="btn btn--bg">{children}</a>
+      <a href={hrefLink} className="btn btn--bg">{children}</a>
     </div>
   )
 }
@@ -57,7 +57,7 @@ function HeroSocials({children}) {
 function HeroSocial({social}) {
   return (
       <div className="home-hero__social">
-      <a href={social.srcIcon} className="home-hero__social-icon-link" target="_blank">
+      <a href={social.link} className="home-hero__social-icon-link" target="_blank">
         <img
           src={social.srcIcon}
           alt="icon"

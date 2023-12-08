@@ -1,40 +1,73 @@
-export default function Footer () {
+function Footer ({children}) {
 
     return (
         <footer className="main-footer">
          <div className="main-container">
             <div className="main-footer__upper">
-            <div className="main-footer__row main-footer__row-1">
-                <h2 className="heading heading-sm main-footer__heading-sm">
-                <span>Social</span>
-                </h2>
-                <div className="main-footer__social-cont">
-                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/nazim-mouza%C3%AF-647a29211/">
-                    <img
-                    className="main-footer__icon"
-                    src="./src/assets/img/linkedin.png"
-                    alt="icon-linkedin"
-                    />
-                </a>
-                <a target="_blank" rel="noreferrer" href="#">
-                    <img
-                    className="main-footer__icon"
-                    src="./src/assets/img/github-icon2.png"
-                    alt="icon"
-                    />
-                </a>
-                </div>
-            </div>
-            <div className="main-footer__row main-footer__row-2">
-                <h4 className="heading heading-sm text-lt">Jane Smith</h4>
-                <p className="main-footer__short-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit facilis
-                tempora explicabo quae quod deserunt
-                </p>
-            </div>
+                {children}
             </div>
 
         </div>
     </footer>
     )
 }
+
+function FooterSocials({children}) {
+    return (
+        <div className="main-footer__row main-footer__row-1">
+            {children}
+        </div>
+    )
+}
+
+function FooterInfos({children}) {
+    return (
+        <div className="main-footer__row main-footer__row-2">
+         {children}
+    </div>
+    )
+}
+
+function TitleInfos({children}) {
+    return (
+        <h4 className="heading heading-sm text-lt">{children}</h4>
+    )
+}
+
+function DescriptionInfos({children}) {
+    return (
+        <p className="main-footer__short-desc">
+            {children}
+        </p>
+    )
+}
+
+function SocialInfos({children}) {
+    return (
+        <h2 className="heading heading-sm main-footer__heading-sm">
+        <span>{children}</span>
+        </h2>
+    )
+}
+
+function SocialsWrapper({children}) {
+    return (
+        <div className="main-footer__social-cont">
+            {children}
+        </div>
+    )
+}
+
+function SocialLink({social}) {
+    return (
+        <a target="_blank" rel="noreferrer" href={social.link}>
+            <img
+            className="main-footer__icon"
+            src={social.srcIcon}
+            alt="icon"
+            />
+    </a>
+    )
+}
+
+export { Footer, FooterSocials, FooterInfos, SocialLink, TitleInfos , DescriptionInfos, SocialInfos, SocialsWrapper}

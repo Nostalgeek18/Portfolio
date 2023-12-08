@@ -25,18 +25,22 @@ function Logo({ src, alt, children }) {
 }
 
 // Compound component: Navigation
-function Navigation({ links }) {
+function Navigation({children }) {
   return (
     <ul className="header__links">
-      {links.map((link) => (
-        <li className="header__link-wrapper" key={link.id}>
-          <a href={link.url} className="header__link">
-            {link.text}
-          </a>
-        </li>
-      ))}
+      {children}
     </ul>
   );
+}
+
+function NavigationLink({linkData, children}) {
+  return (
+    <li className="header__link-wrapper" key={linkData.id}>
+      <a href={linkData.url} className="header__link">
+        {children}
+      </a>
+    </li>
+  )
 }
 
 // Compound component: HamburgerMenu
@@ -74,4 +78,4 @@ function SmallMenu({ isActive, links }) {
   );
 }
 
-export { Header, Logo, Navigation, HamburgerMenu, SmallMenu };
+export { Header, Logo, Navigation, NavigationLink,  HamburgerMenu, SmallMenu };
