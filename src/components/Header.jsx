@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header({menuActive, toggleMenu}) {
 
     return (
         <header className="header">
@@ -30,7 +30,7 @@ export default function Header() {
                         <a href="./index.html#contact" className="header__link"> Contact </a>
                     </li>
                     </ul>
-                    <div className="header__main-ham-menu-cont">
+                    <div className="header__main-ham-menu-cont" onClick={toggleMenu}>
                     <img
                         src="./src/assets/img/ham-menu.svg"
                         alt="hamburger menu"
@@ -44,7 +44,7 @@ export default function Header() {
                     </div>
                 </div>
                 </div>
-                <div className="header__sm-menu">
+                <div className={`header__sm-menu ${menuActive ? 'header__sm-menu--active' : ''}`}>
                 <div className="header__sm-menu-content">
                     <ul className="header__sm-menu-links">
                     <li className="header__sm-menu-link">
