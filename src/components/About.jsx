@@ -102,17 +102,17 @@ function MainDescription({children}) {
     )
 }
 
-About.ContentTitle   = ContentTitle
-About.Content        = Content
-About.ContactDetails = ContactDetails
-About.ContactCTA     = ContactCTA
-About.TitleSkills    = TitleSkills
-About.ContentSkills  = ContentSkills
-About.SkillsWrapper  = SkillsWrapper
-About.Skill          = Skill 
-About.Heading        = Heading 
-About.MainContent    = MainContent 
+About.ContentTitle    = ContentTitle
+About.Content         = Content
+About.ContactDetails  = ContactDetails
+About.ContactCTA      = ContactCTA
+About.TitleSkills     = TitleSkills
+About.ContentSkills   = ContentSkills
+About.SkillsWrapper   = SkillsWrapper
+About.Skill           = Skill 
+About.Heading         = Heading 
+About.MainContent     = MainContent 
 About.MainDescription = MainDescription
-About.MainTitle      = MainTitle
+About.MainTitle       = MainTitle
 
 export { About } 

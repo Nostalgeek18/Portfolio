@@ -1,0 +1,25 @@
+{
+    "jonction": {
+      "and": "et"
+    },
+    "header": {
+      "home": "Accueil",
+      "projects": "Projets",
+      "about": "À propos",
+      "contact": "Contact"
+    },
+    "home": {
+      "title": "Salut ! Je m'appelle {{name}}",
+      "description": "Je suis un développeur front end passioné basé a Montreal, CA. Mes spécialités sont",
+      "cta": "Voir mes projets"
+    },
+    "skills": {
+      "HTML": "HTML",
+      "CSS": "CSS",
+      "JavaScript": "JavaScript"
+    },
+    "footer": {
+      "title": "Contactez-moi",
+      "text": "N'hésitez pas à me contacter pour quoi que ce soit ! Je serais heureux d'échanger par appel ou courriel pour discuter de projets ou d'idées. Rejoignez-moi par email à l'adresse mouzai.@yahoo.com"
+    }
+}

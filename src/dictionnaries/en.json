@@ -1,0 +1,25 @@
+{
+    "jonction": {
+      "and": "and"
+    },
+    "header": {
+      "home": "Home",
+      "projects": "Projects",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "home": {
+      "title": "Hey, my name is {{name}}",
+      "description": "I am a passionate frontend developer based in Montreal, CA. My specialities are",
+      "cta": "See my projects"
+    },
+    "skills": {
+      "HTML": "HTML",
+      "CSS": "CSS",
+      "JavaScript": "JavaScript"
+    },
+    "footer": {
+      "title": "Contact me",
+      "text": "Please reach out if you have any questions! I'm happy to jump on a video call to brainstorm projects and ideas. Send me an email at mouzai.@yahoo.com"
+    }
+}

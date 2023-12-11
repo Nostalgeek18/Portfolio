@@ -1,14 +1,22 @@
 
+import { createContext, useContext } from 'react';
+import { useTranslation } from 'react-i18next';
+import { AppContext } from '../App';
 
+const HeaderContext = createContext()
 // Compound component: Header
 function Header({ children }) {
 
+  const { t } = useContext(AppContext)
+
   return (
-    <header className="header">
-      <div className="header__content">
-        {children}
-      </div>
-    </header>
+    <HeaderContext.Provider value={t} >
+      <header className="header">
+        <div className="header__content">
+          {children}
+        </div>
+      </header>
+    </HeaderContext.Provider>
   );
 }
 
@@ -34,6 +42,7 @@ function Navigation({children }) {
 }
 
 function NavigationLink({linkData, children}) {
+
   return (
     <li className="header__link-wrapper" key={linkData.id}>
       <a href={linkData.url} className="header__link">

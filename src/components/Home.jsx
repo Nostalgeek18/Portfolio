@@ -1,3 +1,6 @@
+import { useContext } from 'react';
+import App, { AppContext } from '../App';
+ 
  function Home({children}) {
   return  (
     <section className="home-hero">
@@ -6,17 +9,36 @@
   )
 }
 
-function HomeTitle({children}) {
+function HomeTitle({ name }) {
+
+  const { t } = useContext(AppContext) 
+
   return (
-    <h1 className="heading-primary">{children}</h1>
+    <h1 className="heading-primary">{t('home.title', { name })}</h1>
   )
 }
 
-function HomeHeroInfo({children}) {
+function HomeHeroInfo({ skills }) {
+
+  const { t } = useContext(AppContext) 
+
+  // Adaptive appropriate joiner
+  const joiner = t('jonction.and')
+
+   // Map skills to their translated counterparts
+   const translatedSkills = skills.map((skill) => t(`skills.${skill}`));
+
+  // Join the translated skills using a comma as the joiner
+  const commaJoinedSkills = translatedSkills.slice(0, -1).join(', ');
+
+  // Combine the comma-joined skills with the last skill using the appropriate joiner
+  const fullLabel = t('home.description') + commaJoinedSkills + ` ${joiner} ` + translatedSkills.slice(-1);
+
+
   return (
     <div className="home-hero__info">
     <p className="text-primary">
-      {children}
+      {fullLabel}
     </p>
   </div>
   )
