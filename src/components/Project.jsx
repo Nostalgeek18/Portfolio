@@ -1,4 +1,9 @@
+import { AppContext } from "../App"
+import { useContext } from "react"
+
 export default function Project({title, description, hrefLink, srcImg}) {
+
+    const { t } = useContext(AppContext)
 
     return (
         <>
@@ -18,9 +23,8 @@ export default function Project({title, description, hrefLink, srcImg}) {
             </p>
             <a
                 href={hrefLink}
-                className="btn btn--med btn--theme dynamicBgClr"
-                >Learn more</a
-            >
+                className="btn btn--med btn--theme dynamicBgClr">{t('projects.cta')}
+            </a>
             </div>
         </div>
         </>

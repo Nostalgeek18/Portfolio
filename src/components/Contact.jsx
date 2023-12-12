@@ -1,3 +1,6 @@
+import { AppContext } from "../App"
+import { useContext } from "react"
+
 export default function Contact ({children}) {
   return (
       <section id="contact" className="contact sec-pad dynamicBg">
@@ -28,11 +31,14 @@ return (
 )
 }
 
-function ContactDescription({children}) {
+function ContactDescription({email}) {
+
+const { t } = useContext(AppContext) 
+
 return (
   <span className="heading-sec__sub heading-sec__sub--lt">
-  {children}
-</span>
+    {t('contact.text', {email} )}
+  </span>
 )
 }
 

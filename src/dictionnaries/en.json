@@ -10,7 +10,7 @@
     },
     "home": {
       "title": "Hey, my name is {{name}}",
-      "description": "I am a passionate frontend developer based in Montreal, CA. My specialities are",
+      "description": "I am a passionate Frontend Developer based in Montreal, CA. My specialities are ",
       "cta": "See my projects"
     },
     "skills": {
@@ -18,8 +18,37 @@
       "CSS": "CSS",
       "JavaScript": "JavaScript"
     },
-    "footer": {
+    "contact": {
       "title": "Contact me",
-      "text": "Please reach out if you have any questions! I'm happy to jump on a video call to brainstorm projects and ideas. Send me an email at mouzai.@yahoo.com"
-    }
+      "text": "Please reach out if you have any questions! I'm happy to jump on a video call to brainstorm projects and ideas. Send me an email at {{email}}"
+    },
+    "footer": {
+        "description": "Eager-to-learn Frontend dedicated Web Developer characterized with a keen eye for design and a passion for creating user-friendly and visually appealing websites.",
+        "socials": "Socials"
+    },
+    "about": {
+        "title": "About me",
+        "description": "I'm a frontend developer based out of Montreal, CA.  I love building apps that solve real-world problems, and that are delightful to use. My specialities include TypeScript, React JS, CSS, Styled Components and more.",
+        "contentTitle": "Get to know me !",
+        "paragraphOne": "My background is in teaching and marketing. I have a bachelors degree in English from Kings College. When I'm not coding, I take care of my five adorable cats.",
+        "paragraphTwo": "I'm open to  job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.",
+        "titleSkills" : "My skills"
+    },
+    "projects": {
+        "title": "Projects",
+        "description": "Some of my personal projects, including links to the code and live version. Click the button to learn more about each one.",
+        "cta": "Learn more",
+        "projectOne": {
+            "title": "Quiz App",
+            "description":"Quizzie is a simple quiz app that lets you select alternatives and then gives you a score. It's built with functional React components."
+        },
+        "projectTwo": {
+            "title": "Portfolio",
+            "description":"This portfolio that you are currently watching comes mainly from an Open Source portfolio coded on HTML, CSS and vanilla JS. I then enhanced in React and added several features such as translation and routings. I aim to make it Open Source and easy to adapt for anyone who'd like a React portfolio."
+        },
+        "projectThree": {
+            "title": "Password Generator",
+            "description":"A responsive app that generates random passwords based on a few user inputs, e.g. length, types of characters, etc. Built with HTML, CSS, and vanilla JavaScript."
+        }
+      }
 }

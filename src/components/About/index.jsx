@@ -1,9 +1,48 @@
+import { AppContext } from "../../App"
+import { useContext } from "react"
+import * as styled from './style'
 
-function About({children}) {
+function About() {
+
+    const { t } = useContext(AppContext)
+
     return (
         <section id="about" className="about sec-pad">
             <div className="main-container">
-             {children}
+            <Heading>
+                <MainTitle>{t('about.title')}</MainTitle>
+                <MainDescription>
+                    {t('about.description')}
+                </MainDescription>
+                </Heading>
+                <Content>
+                <MainContent>
+                    <ContentTitle>{t('about.contentTitle')}</ContentTitle>
+                    <styled.AboutDetailsParagraph>
+                          {t('about.paragraphOne')}
+                     </styled.AboutDetailsParagraph>
+                     <styled.AboutDetailsParagraph>
+                          {t('about.paragraphTwo')}
+                     </styled.AboutDetailsParagraph>
+                </MainContent>
+                <ContentSkills>
+                    <TitleSkills>{t('about.titleSkills')}</TitleSkills>
+                    <SkillsWrapper>
+                    <Skill>HTML</Skill>
+                    <Skill>CSS</Skill>
+                    <Skill>JavaScript</Skill>
+                    <Skill>React</Skill>
+                    <Skill>TypeScript</Skill>
+                    <Skill>PHP</Skill>
+                    <Skill>SQL</Skill>
+                    <Skill>Git</Skill>
+                    <Skill>Figma</Skill>
+                    <Skill>Agile</Skill>
+                    <Skill>JQuery</Skill>
+                    <Skill>Responsive</Skill>
+                    </SkillsWrapper>
+                </ContentSkills>
+            </Content>
             </div>
         </section>
     )
@@ -21,14 +60,6 @@ function Content({children}) {
         <div className="about__content">
             {children}
         </div>
-    )
-}
-
-function ContactDetails({children}) {
-    return (
-        <p className="about__content-details-para">
-         {children}
-        </p>
     )
 }
 
@@ -102,17 +133,5 @@ function MainDescription({children}) {
     )
 }
 
-About.ContentTitle    = ContentTitle
-About.Content         = Content
-About.ContactDetails  = ContactDetails
-About.ContactCTA      = ContactCTA
-About.TitleSkills     = TitleSkills
-About.ContentSkills   = ContentSkills
-About.SkillsWrapper   = SkillsWrapper
-About.Skill           = Skill 
-About.Heading         = Heading 
-About.MainContent     = MainContent 
-About.MainDescription = MainDescription
-About.MainTitle       = MainTitle
 
 export { About } 
