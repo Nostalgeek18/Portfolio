@@ -21,7 +21,7 @@ export default function Projects () {
             <Project 
                 title={t('projects.projectOne.title')}
                 description={t('projects.projectOne.description')}
-                hrefLink="./project-1.html"
+                hrefLink="/projects"
                 srcImg="./src/assets/img/quizzImg.png"
             />
 

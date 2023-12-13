@@ -1,10 +1,18 @@
 import { AppContext } from "../App"
 import { useContext } from "react"
 
-export default function Contact ({children}) {
+export default function Contact ({email}) {
+
+  const { t } = useContext(AppContext) 
+
   return (
-      <section id="contact" className="contact sec-pad dynamicBg">
-      {children}
+    <section id="contact" className="contact sec-pad dynamicBg">
+      <MainContainer>
+        <MainInfos>
+          <ContactHeading>{t('contact.title')}</ContactHeading>
+          <ContactDescription email={email}/>
+        </MainInfos>
+      </MainContainer>
     </section>
   )
 }

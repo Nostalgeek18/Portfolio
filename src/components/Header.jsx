@@ -1,22 +1,32 @@
 
-import { createContext, useContext } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useContext } from 'react';
 import { AppContext } from '../App';
+import { LanguageSwitch } from './atoms/LanguageSwitch';
 
-const HeaderContext = createContext()
 // Compound component: Header
-function Header({ children }) {
+function Header({ headerLinks }) {
 
-  const { t } = useContext(AppContext)
+  const { t, activeLanguage, switchLanguage } = useContext(AppContext) 
 
   return (
-    <HeaderContext.Provider value={t} >
       <header className="header">
         <div className="header__content">
-          {children}
+          <Logo 
+              src="./src/assets/img/avatar4.png"
+              alt="Nazim Mouzaï Logo Image">
+                Nazim Mouzaï
+              </Logo> 
+            <Navigation>
+                <NavigationLink linkData={headerLinks[0]}> {t(`header.${headerLinks[0].text}`)} </NavigationLink>
+                <NavigationLink linkData={headerLinks[1]}> {t(`header.${headerLinks[1].text}`)} </NavigationLink>
+                <NavigationLink linkData={headerLinks[2]}> {t(`header.${headerLinks[2].text}`)} </NavigationLink>
+                <NavigationLink linkData={headerLinks[3]}> {t(`header.${headerLinks[3].text}`)} </NavigationLink>
+                <LanguageSwitch onClick={switchLanguage}></LanguageSwitch>
+            </Navigation>
+            <HamburgerMenu isActive={activeLanguage} onClick={switchLanguage} />
+            <SmallMenu isActive={activeLanguage} links={headerLinks} />
         </div>
       </header>
-    </HeaderContext.Provider>
   );
 }
 

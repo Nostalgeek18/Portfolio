@@ -1,5 +1,6 @@
 import { AppContext } from "../App"
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 
 export default function Project({title, description, hrefLink, srcImg}) {
 
@@ -21,10 +22,11 @@ export default function Project({title, description, hrefLink, srcImg}) {
             <p className="projects__row-content-desc">
                 {description}
             </p>
-            <a
-                href={hrefLink}
+            <Link
+                // href={hrefLink}
+                to="/projects"
                 className="btn btn--med btn--theme dynamicBgClr">{t('projects.cta')}
-            </a>
+            </Link>
             </div>
         </div>
         </>

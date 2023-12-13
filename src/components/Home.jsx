@@ -1,10 +1,22 @@
 import { useContext } from 'react';
 import { AppContext } from '../App';
  
- function Home({children}) {
+ function Home({socialsData}) {
+
+  const { t } = useContext(AppContext) 
+
   return  (
     <section className="home-hero">
-     {children}
+        <HomeContent>
+          <HomeTitle name="Nazim Mouzaï"/>
+          <HomeHeroInfo skills={['HTML', 'CSS', 'JavaScript', 'PHP', 'TypeScript', 'React']}/>
+          <HomeCta hrefLink="./#projects"> {t('home.cta')} </HomeCta>
+        </HomeContent>
+        <HomeBottomWidget/>
+        <HeroSocials>
+          <HeroSocial social={socialsData.linkedin}/>
+          <HeroSocial social={socialsData.github}/>
+        </HeroSocials>
     </section>
   )
 }
