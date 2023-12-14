@@ -2,10 +2,14 @@
 import Project from "./Project"
 import { AppContext } from "../App"
 import { useContext } from "react"
+import { getAllProjectsDatas } from "../tools/mix"
+
 
 export default function Projects () {
 
     const { t } = useContext(AppContext)
+
+    const projectsData = getAllProjectsDatas()
 
     return (
         <section id="projects" className="projects sec-pad">
@@ -18,24 +22,14 @@ export default function Projects () {
             </h2>
 
             <div className="projects__content">
-            <Project 
-                title={t('projects.projectOne.title')}
-                description={t('projects.projectOne.description')}
-                hrefLink="/projects"
-                srcImg="./src/assets/img/quizzImg.png"
-            />
-
-            <Project 
-                title={t('projects.projectTwo.title')}
-                description={t('projects.projectTwo.description')}
-                hrefLink="./project-2.html"
-                srcImg="./src/assets/img/basicSite.png"
-            />
-            <Project 
-                title={t('projects.projectThree.title')}
-                description={t('projects.projectThree.description')}
-                srcImg="./src/assets/img/passwordGenerator.png"
-            />
+                {projectsData.map((project) => ( <Project 
+                    key={project.id}
+                    title={t(`projects.${project.tLabelName}.title`)}
+                    description={t(`projects.${project.tLabelName}.description`)}
+                    hrefLink="/projects"
+                    srcImg={project.image}
+                    id={project.id}
+                />))}
             </div>
         </div>
         </section>

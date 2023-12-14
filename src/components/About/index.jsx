@@ -1,6 +1,7 @@
 import { AppContext } from "../../App"
 import { useContext } from "react"
 import * as styled from './style'
+import Skill from "../atoms/Skill"
 
 function About() {
 
@@ -24,22 +25,25 @@ function About() {
                      <styled.AboutDetailsParagraph>
                           {t('about.paragraphTwo')}
                      </styled.AboutDetailsParagraph>
+                     <styled.AboutDetailsParagraph>
+                          {t('about.paragraphThree')}
+                     </styled.AboutDetailsParagraph>
                 </MainContent>
                 <ContentSkills>
                     <TitleSkills>{t('about.titleSkills')}</TitleSkills>
                     <SkillsWrapper>
-                    <Skill>HTML</Skill>
-                    <Skill>CSS</Skill>
-                    <Skill>JavaScript</Skill>
-                    <Skill>React</Skill>
-                    <Skill>TypeScript</Skill>
-                    <Skill>PHP</Skill>
-                    <Skill>SQL</Skill>
-                    <Skill>Git</Skill>
-                    <Skill>Figma</Skill>
-                    <Skill>Agile</Skill>
-                    <Skill>JQuery</Skill>
-                    <Skill>Responsive</Skill>
+                        <Skill>HTML</Skill>
+                        <Skill>CSS</Skill>
+                        <Skill>JavaScript</Skill>
+                        <Skill>React</Skill>
+                        <Skill>TypeScript</Skill>
+                        <Skill>PHP</Skill>
+                        <Skill>SQL</Skill>
+                        <Skill>Git</Skill>
+                        <Skill>Figma</Skill>
+                        <Skill>Agile</Skill>
+                        <Skill>JQuery</Skill>
+                        <Skill>Responsive</Skill>
                     </SkillsWrapper>
                 </ContentSkills>
             </Content>
@@ -63,13 +67,6 @@ function Content({children}) {
     )
 }
 
-function ContactCTA({hrefContact, children}) {
-    return (
-        <a href={hrefContact} className="btn btn--med btn--theme dynamicBgClr">
-            {children}
-        </a>
-    )
-}
 
 function ContentSkills({children}) {
     return (
@@ -88,14 +85,6 @@ function TitleSkills({children}) {
 function SkillsWrapper({children}) {
     return (
         <div className="skills">
-            {children}
-        </div>
-    )
-}
-
-function Skill({children}) {
-    return (
-        <div className="skills__skill">
             {children}
         </div>
     )

@@ -20,7 +20,7 @@
     },
     "contact": {
       "title": "Contact me",
-      "text": "Please reach out if you have any questions! I'm happy to jump on a video call to brainstorm projects and ideas. Send me an email at {{email}}"
+      "text": "Please reach out if you have any questions! I'm happy to jump on a video call to brainstorm projects and ideas. Send me an email at "
     },
     "footer": {
         "description": "Eager-to-learn Frontend dedicated Web Developer characterized with a keen eye for design and a passion for creating user-friendly and visually appealing websites.",
@@ -30,25 +30,51 @@
         "title": "About me",
         "description": "I'm a frontend developer based out of Montreal, CA.  I love building apps that solve real-world problems, and that are delightful to use. My specialities include TypeScript, React JS, CSS, Styled Components and more.",
         "contentTitle": "Get to know me !",
-        "paragraphOne": "My background is in teaching and marketing. I have a bachelors degree in English from Kings College. When I'm not coding, I take care of my five adorable cats.",
-        "paragraphTwo": "I'm open to  job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.",
+        "paragraphOne": "My background is much more oriented Frontend by building Front-end of websites and web web applications to deliver a smooth and appealing user experience. However, I do have some backend knowledge, mainly from my degree in programming from Maisonneuve College.",
+        "paragraphTwo": "I am into programming since many years, check out some of my work in the Projects section.",
+        "paragraphThree": "I'm open to  job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.",
         "titleSkills" : "My skills"
     },
     "projects": {
         "title": "Projects",
         "description": "Some of my personal projects, including links to the code and live version. Click the button to learn more about each one.",
         "cta": "Learn more",
+        "liveCTA" : "Live Link",
+        "codeSource": "Code Source",
+        "goBack": "go back",
+        "seeLive": "See live",
+        "toolsUsed": "Tools used",
+        "overviewTitle": "Overview Project",
         "projectOne": {
             "title": "Quiz App",
-            "description":"Quizzie is a simple quiz app that lets you select alternatives and then gives you a score. It's built with functional React components."
+            "description":"Quizzie is a simple quiz app that lets you select alternatives and then gives you a score. It's built with functional React components.",
+            "overview" : {
+              "firstParagraph"  : "Quizzie",
+              "secondParagraph" : "Although a simple transition in itself doesn't necessarily require a great deal of effort, I made the task more complex by aiming to improve much more the project by implementing new functionalities thanks to the panoply of tools available in React. In particular, the ability to add a translation, compartmentalize code into several distinct components, have several pages in SPA, use styled components etc...",
+              "thirdParagraph"  : "My ultimate aim is to make it open-source too, exactly like the original project. But with the addition of my React features to make the project much more powerful and attractive to employers.",
+              "checkLinkParagraph" : "Feel free to consult the source code via the link below. I'd be delighted to hear from you, either for your personal uasge or to give you some advice."
+            }
+            
         },
         "projectTwo": {
             "title": "Portfolio",
-            "description":"This portfolio that you are currently watching comes mainly from an Open Source portfolio coded on HTML, CSS and vanilla JS. I then enhanced in React and added several features such as translation and routings. I aim to make it Open Source and easy to adapt for anyone who'd like a React portfolio."
+            "description":"This portfolio that you are currently watching comes mainly from an Open Source portfolio coded on HTML, CSS and vanilla JS. I then enhanced it in React and added several features such as translation and routings. I aim to make it Open Source and easy to adapt for anyone who'd like a React portfolio.",
+            "overview" : {
+              "firstParagraph"  : "This portfolio originally came from an Open-Source project with a neat design, but limited architecture and capabilities due to its deployment in HTML and JavaScript vanilla. With a view to honing my React skills, I migrated the project to React in order to optimize it.",
+              "secondParagraph" : "Although a simple transition in itself doesn't necessarily require a great deal of effort, I made the task more complex by aiming to improve much more the project by implementing new functionalities thanks to the panoply of tools available in React. In particular, the ability to add a translation, compartmentalize code into several distinct components, have several pages in SPA, use styled components etc...",
+              "thirdParagraph"  : "My final desire is to make it open-source too, exactly like the original project. But with the addition of my React features to make the project much more powerful and attractive to employers.",
+              "checkLinkParagraph" : "Feel free to consult the source code via the link below. I'd be delighted to hear from you, either for your personal uasge or to give you some advice."
+            }
         },
         "projectThree": {
-            "title": "Password Generator",
-            "description":"A responsive app that generates random passwords based on a few user inputs, e.g. length, types of characters, etc. Built with HTML, CSS, and vanilla JavaScript."
-        }
+          "title": "Password Generator",
+          "description":"Une application responsive qui génère des mots de passe aléatoires en se basant sur quelques données de l'utilisateur. Construite avec HTML, CSS, et JavaScript.",
+          "overview" : {
+           "firstParagraph"  : "Le générateur de mot de passe est elle aussi une application basique de générations de mot de passe réalisé à partir de Zéro. Assez modeste, ce projet s'inscrit dans les débuts de ma réapprentissage des technologies Front End.",
+           "secondParagraph" : "Comme elle ne représente que mes débuts en programmation, j'espère tout de même avoir un projet plus développé à l'avenir lorsque l'inspiration se présentera.",
+           "thirdParagraph"  : "",
+           "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
+         }
       }
+    }
 }

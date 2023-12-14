@@ -45,7 +45,10 @@ const { t } = useContext(AppContext)
 
 return (
   <span className="heading-sec__sub heading-sec__sub--lt">
-    {t('contact.text', {email} )}
+    {t('contact.text')} 
+    <a href={`mailto:${email}`} className="footer__link">
+    {email}
+    </a>
   </span>
 )
 }

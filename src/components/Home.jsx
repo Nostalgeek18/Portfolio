@@ -6,7 +6,7 @@ import { AppContext } from '../App';
   const { t } = useContext(AppContext) 
 
   return  (
-    <section className="home-hero">
+    <section className="home-hero" id="home">
         <HomeContent>
           <HomeTitle name="Nazim Mouzaï"/>
           <HomeHeroInfo skills={['HTML', 'CSS', 'JavaScript', 'PHP', 'TypeScript', 'React']}/>

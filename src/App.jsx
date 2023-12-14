@@ -1,15 +1,10 @@
 import { useState, createContext, useEffect } from 'react'
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css'
-import { Header, Logo, Navigation, NavigationLink, HamburgerMenu, SmallMenu } from './components/Header';
-import Footer from './components/Footer/index'
-import Projects from './components/Projects'
-import { About }  from './components/About'
-import { Contact, MainContainer, MainInfos , ContactHeading, ContactDescription} from './components/Contact'
-import {Home, HeroSocials, HeroSocial, HomeContent, HomeCta, HomeBottomWidget, HomeTitle, HomeHeroInfo} from './components/Home'
-import { LanguageSwitch } from './components/atoms/LanguageSwitch';
-import { PersonnalProjects } from './pages/PersonnalProjects'
+import PersonnalProjects  from './pages/PersonnalProjects'
 import Layout from "./components/Layout"
+import Main from './pages/Main'
+import ScrollToHashElement from './tools/ScrollToHashElement'
 
 import './i18n';
 import { useTranslation } from 'react-i18next';
@@ -19,31 +14,23 @@ const AppContext = createContext()
 function App() {
 
   const {t, i18n } = useTranslation()
-  const [menuActive, setMenuActive]         = useState(false);
-  const [activeLanguage, setActiveLanguage] = useState("fr")
+  const initialLanguage = localStorage.getItem("language") !== undefined ? localStorage.getItem("language") : "fr"
+
+  const [activeLanguage, setActiveLanguage] = useState(initialLanguage)
 
   useEffect(()=> {
     i18n.changeLanguage(activeLanguage) //Set to active language
+    localStorage.setItem("language", activeLanguage); //Set preference of user in localStorage
 
   }, [activeLanguage])
 
-  const toggleMenu = () => {
-    setMenuActive((prevMenuActive) => !prevMenuActive);
-  };
 
+  //TODO : Have variable here to have Main and Second language variable from user object.
   function switchLanguage() {
     setActiveLanguage(oldValue => (
        oldValue == "fr" ? "en" : "fr"
     ))
-
   }
-
-  const headerLinks = [
-    { id: 1, url: './index.html', text: 'home' },
-    { id: 2, url: './index.html#projects', text: 'projects' },
-    { id: 3, url: './index.html#about', text: 'about' },
-    { id: 4, url: './index.html#contact', text: 'contact' },
-  ];
 
   const socialsData = {
     linkedin : {
@@ -60,20 +47,15 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <AppContext.Provider value={{activeLanguage, switchLanguage, t}}>
-        <Header headerLinks={headerLinks}/>
-        <Home socialsData={socialsData}/>
-        <Projects />
-        <About/>
-        <Contact email="mouzai.n@yahoo.com"/>
-        <Footer socials={socialsData} name="Nazim Mouzaï"/>
-    </AppContext.Provider>
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/"/>
-        <Route path="/projects" element={<PersonnalProjects/>}/>
-      </Route>
-    </Routes>
+        <AppContext.Provider value={{activeLanguage, switchLanguage, t}}>
+        <ScrollToHashElement /> {/* Important for scrolling to #id in DOM */}
+       <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Main/>} />
+          <Route path="/projects/:id" element={<PersonnalProjects/>}/>
+        </Route>
+      </Routes>
+      </AppContext.Provider>
     </BrowserRouter>
     </>
   )

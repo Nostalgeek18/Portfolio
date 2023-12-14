@@ -20,7 +20,7 @@
     },
     "contact": {
       "title": "Contactez-moi",
-      "text": "N'hésitez pas à me contacter pour quoi que ce soit ! Je serais heureux d'échanger par appel ou courriel pour discuter de projets ou d'idées. Rejoignez-moi par email à l'adresse {{email}}"
+      "text": "N'hésitez pas à me contacter pour quoi que ce soit ! Je serais heureux d'échanger par appel ou courriel pour discuter de projets ou d'idées. Rejoignez-moi par email à l'adresse "
     },
     "footer": {
       "description": "Développeur Front End avide d'apprentissage doté d'un sens aigu du design et d'une passion pour la création de sites web conviviaux et visuellement attrayants.",
@@ -30,25 +30,50 @@
     "title": "À propos de moi",
     "description": "Je suis un développeur Front-End basé à Montréal, CA.  J'affectionne particulièrement réaliser des applications qui répondent à des problèmes courants et qui sont agréables à utiliser. Mes spécialités incluent CSS, JavaScript, PHP, React et d'autres.",
     "contentTitle": " Mais encore ? ",
-    "paragraphOne": "Je détiens un DEC en informatique de gestion par Maisonneuve principalement axé Front End mais avec des notions Back End également. Consultez certains de mes projects dans la section plus bas !",
-    "paragraphTwo": "Je suis ouvert aux opportunités d'emploi où je peux contribuer, apprendre et me développer. Si vous avez une bonne opportunité qui correspond à mes compétences et à mon expérience, n'hésitez pas à m'en faire part.",
+    "paragraphOne": "Mon parcours est beaucoup plus orienté Frontend en construisant le Front-end de sites web et d'applications web afin d'offrir une expérience utilisateur fluide et attrayante. Cependant, j'ai quelques connaissances en backend, principalement grâce à mon diplôme en programmation du Collège Maisonneuve.",
+    "paragraphTwo": "My background is much more front-end oriented, building the front-end of websites and web applications to deliver a fluid and engaging user experience. However, I do have some backend knowledge, mainly thanks to my programming diploma from Collège Maisonneuve.",
+    "paragraphThree": "Je suis ouvert aux offres d'emploi qui me permettent de contribuer, d'apprendre et d'évoluer. Si vous avez une bonne opportunité qui correspond à mes compétences et à mon expérience, n'hésitez pas à me contacter.",
     "titleSkills" : "Mes compétences"
   },
   "projects": {
     "title": "Projets",
     "description": "Quelques-uns de mes projets personnels, avec des liens vers le code et la version live. Cliquez sur le bouton pour en savoir plus sur chacun d'entre eux.",
     "cta": "En savoir plus",
+    "liveCTA" : "Lien live",
+    "codeSource": "Code Source",
+    "goBack": "Retour",
+    "seeLive": "Voir en live",
+    "toolsUsed": "Outils utilisés",
+    "overviewTitle": "Vue d'ensemble du projet",
     "projectOne": {
       "title": "Quiz App",
-      "description":"Quizzie est une application de quiz simple qui vous permet de sélectionner des alternatives et vous donne ensuite un score. Elle est construite avec des composants React fonctionnels."
+      "description":"Quizzie est une application de quiz simple à utliser qui vous permet de répondre à des questions basées sur un thème choisi et vous donner ensuite votre score. Elle est construite avec des composants React ergonomiques.",
+      "overview" : {
+        "firstParagraph"  : "Quizzie est une application React réalisée à partir de zéro dans le cadre d'une formation React. Les prérequis à l'origine du projet étaient assez basique à mon goût, j'ai finalement décidé de le pousser plus loin pour le rendre plus complet et être réellement satisfait. ",
+        "secondParagraph" : "Dans l'optique de le perfectionner, j'y ait implémenté plusieurs options. Notamment la possibilité de choisir son propre thème de questions, le nombre de ceux-ci et surtout une approche moderne en compartiment les questions en différents panels. Une optimisation que je n'ai pas vu dans la dizaine de différents projets que j'ai consulté des autres participants au programme.",
+        "thirdParagraph"  : "Bien que très satisfait du rendu final, je reste toujours ouvert à l'amélioration. ",
+        "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
+      }
      },
      "projectTwo": {
          "title": "Portfolio",
-         "description":"Ce portfolio que vous êtes en train de regarder provient principalement d'un portfolio Open Source codé en HTML, CSS et vanilla JS. Je l'ai par la suite transitionné en React et ajouté plusieurs fonctionnalités telles que la traduction et les routages. Mon but est de le rendre Open Source et facile à adapter pour tous ceux qui voudraient un portfolio React."
+         "description":"Ce portfolio que vous êtes en train de regarder provient principalement d'un portfolio Open Source codé en HTML, CSS et vanilla JS. Je l'ai par la suite transitionné en React et ajouté plusieurs fonctionnalités telles que la traduction et les routages. Mon but est de le rendre Open Source et facile à adapter pour tous ceux qui voudraient un portfolio en React.",
+         "overview" : {
+          "firstParagraph"  : "Ce portfolio provient à l'origine d'un projet Open-Source au design soigné, mais à l'architecture et aux capacités limitées en raison de son déploiement en HTML et JavaScript vanille. Dans le but d'affiner mes compétences en React, j'ai migré le projet vers React afin de l'optimiser.",
+          "secondParagraph" : "Bien qu'une simple transition en soi ne demande pas forcément beaucoup d'efforts, j'ai complexifié la tâche en visant à améliorer beaucoup plus le projet en implémentant de nouvelles fonctionnalités grâce à la panoplie d'outils disponibles dans React. En particulier, la possibilité d'ajouter une traduction, de compartimenter le code en plusieurs composants distincts, d'avoir plusieurs pages en SPA, d'utiliser des composants stylisés etc...",
+          "thirdParagraph"  : "Mon but ultime est de le rendre Open-source, exactement comme le projet original. Mais avec l'ajout de mes fonctionnalités React pour rendre le projet beaucoup plus puissant et attrayant pour les employeurs.",
+          "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
+        }
      },
      "projectThree": {
          "title": "Générateur de mots de passe",
-         "description":"Une application responsive qui génère des mots de passe aléatoires en se basant sur quelques données de l'utilisateur. Construite avec HTML, CSS, et JavaScript."
+         "description":"Une application responsive qui génère des mots de passe aléatoires en se basant sur quelques données de l'utilisateur. Construite avec HTML, CSS, et JavaScript.",
+         "overview" : {
+          "firstParagraph"  : "Le générateur de mot de passe est elle aussi une application basique de générations de mot de passe réalisé à partir de Zéro. Assez modeste, ce projet s'inscrit dans les débuts de ma réapprentissage des technologies Front End.",
+          "secondParagraph" : "Comme elle ne représente que mes débuts en programmation, j'espère tout de même avoir un projet plus développé à l'avenir lorsque l'inspiration se présentera.",
+          "thirdParagraph"  : "",
+          "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
+        }
      }
   }
 }

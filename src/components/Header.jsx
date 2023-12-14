@@ -1,18 +1,25 @@
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AppContext } from '../App';
 import { LanguageSwitch } from './atoms/LanguageSwitch';
+import { Link } from 'react-router-dom';
 
 // Compound component: Header
 function Header({ headerLinks }) {
 
-  const { t, activeLanguage, switchLanguage } = useContext(AppContext) 
+  const { t, switchLanguage } = useContext(AppContext) 
+
+  const [smallMenuActive, setSmallMenuActive] = useState(false)
+
+  function toggleSmallMenu() {
+    setSmallMenuActive(oldValue => !oldValue)
+  }
 
   return (
       <header className="header">
         <div className="header__content">
           <Logo 
-              src="./src/assets/img/avatar4.png"
+              src="/src/assets/img/avatar4.png"
               alt="Nazim Mouzaï Logo Image">
                 Nazim Mouzaï
               </Logo> 
@@ -23,8 +30,8 @@ function Header({ headerLinks }) {
                 <NavigationLink linkData={headerLinks[3]}> {t(`header.${headerLinks[3].text}`)} </NavigationLink>
                 <LanguageSwitch onClick={switchLanguage}></LanguageSwitch>
             </Navigation>
-            <HamburgerMenu isActive={activeLanguage} onClick={switchLanguage} />
-            <SmallMenu isActive={activeLanguage} links={headerLinks} />
+            <HamburgerMenu toggleSmallMenu={toggleSmallMenu} smallMenuActive={smallMenuActive} onClick={switchLanguage} />
+            <SmallMenu smallMenuActive={smallMenuActive} links={headerLinks} t={t} />
         </div>
       </header>
   );
@@ -51,44 +58,46 @@ function Navigation({children }) {
   );
 }
 
-function NavigationLink({linkData, children}) {
-
+function NavigationLink({ linkData, children }) {
+  
   return (
     <li className="header__link-wrapper" key={linkData.id}>
-      <a href={linkData.url} className="header__link">
+      <Link to={linkData.anchor} className="header__link">
         {children}
-      </a>
+      </Link>
     </li>
-  )
+  );
 }
 
 // Compound component: HamburgerMenu
-function HamburgerMenu({ isActive, onClick }) {
+function HamburgerMenu({ smallMenuActive, toggleSmallMenu }) {
   return (
-    <div className="header__main-ham-menu-cont" onClick={onClick}>
-      <img
-        src="./src/assets/img/ham-menu-close.svg"
-        alt="hamburger menu"
-        className={`header__main-ham-menu ${isActive ? '' : 'd-none'}`}
-      />
-      <img
-        src="./src/assets/img/ham-menu.svg"
-        alt="hamburger menu close"
-        className={`header__main-ham-menu-close ${isActive ? 'd-none' : ''}`}
-      />
+    <div className="header__main-ham-menu-cont" onClick={toggleSmallMenu}>
+      {smallMenuActive &&
+          <img
+            src="/src/assets/img/ham-menu-close.svg"
+            alt="hamburger menu"
+            className={`header__main-ham-menu d-none}`}
+          /> ||
+        <img
+          src="/src/assets/img/ham-menu.svg"
+          alt="hamburger menu close"
+          className={`header__main-ham-menu-close d-none}`}
+        />
+      }
     </div>
   );
 }
 
-// Compound component: SmallMenu
-function SmallMenu({ isActive, links }) {
+// Compound component: SmallMenu (for mobile)
+function SmallMenu({ smallMenuActive, links, t }) {
   return (
-    <div className={`header__sm-menu ${isActive ? 'header__sm-menu--active' : ''}`}>
+    <div className={`header__sm-menu ${smallMenuActive ? 'header__sm-menu--active' : ''}`}>
       <div className="header__sm-menu-content">
         <ul className="header__sm-menu-links">
           {links.map((link) => (
             <li className="header__sm-menu-link" key={link.id}>
-              <a href={link.url}>{link.text}</a>
+              <Link to={link.anchor}>{t(`header.${link.text}`)}</Link>
             </li>
           ))}
         </ul>

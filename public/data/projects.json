@@ -1,0 +1,59 @@
+{
+    "projects" : [
+        {
+            "id": 1,
+            "tLabelName": "projectOne",
+            "image": "/src/assets/img/quizzImg.png",
+            "linkInDescription": false,
+            "skills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "GIT",
+                "API",
+                "Responsive"
+            ],
+            "codeSource" : "https://github.com/Nostalgeek18/TriviaQuiz",
+            "liveLink" : "https://resplendent-elf-cdcb83.netlify.app/",
+            "isReact" : true
+        },
+        {
+            "id": 2,
+            "tLabelName": "projectTwo",
+            "image": "/src/assets/img/portfolio.png",
+            "linkInDescription": "<a href='https://www.rammaheshwari.com/'>Ram Maheshwari</a>",
+            "skills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "GIT",
+                "API",
+                "JSON",
+                "TypeScript",
+                "Router 6",
+                "i18next"
+            ],
+            "codeSource" : "https://github.com/Nostalgeek18/TriviaQuiz",
+            "liveLink" : "https://resplendent-elf-cdcb83.netlify.app/",
+            "isReact" : true
+        },
+        {
+            "id": 3,
+            "tLabelName": "projectThree",
+            "image": "/src/assets/img/passwordGenerator.png",
+            "linkInDescription": false,
+            "skills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "GIT",
+                "Responsive"
+            ],
+            "codeSource" : "https://github.com/Nostalgeek18/PasswordGenerator",
+            "liveLink" : "https://nostalgeek18.github.io/PasswordGenerator/",
+            "isReact" : false
+        }
+    ]
+}

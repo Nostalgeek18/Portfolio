@@ -1,6 +1,0 @@
-export function PersonnalProjects() {
-    return (
-        <>
-        </>
-    )
-}
