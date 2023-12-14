@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 import { AppContext } from '../App';
 import { LanguageSwitch } from './atoms/LanguageSwitch';
 import { Link } from 'react-router-dom';
+import { getUserInfos } from '../tools/mix.ts'
 
 // Compound component: Header
 function Header({ headerLinks }) {
@@ -15,13 +16,15 @@ function Header({ headerLinks }) {
     setSmallMenuActive(oldValue => !oldValue)
   }
 
+  const { name, avatar} = getUserInfos();
+
   return (
       <header className="header">
         <div className="header__content">
           <Logo 
-              src="/src/assets/img/avatar4.png"
-              alt="Nazim Mouzaï Logo Image">
-                Nazim Mouzaï
+              src={avatar}
+              alt={`${name} avatar`}>
+                {name}
               </Logo> 
             <Navigation>
                 <NavigationLink linkData={headerLinks[0]}> {t(`header.${headerLinks[0].text}`)} </NavigationLink>

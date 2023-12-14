@@ -1,10 +1,13 @@
 import * as style from './style'
 import { AppContext } from '../../App'
 import { useContext } from 'react'
+import { getUserInfos } from '../../tools/mix.ts'
 
 export default function Footer ({ socials, name }) {
 
     const { t } = useContext(AppContext) 
+
+    const { socialsNetwork } = getUserInfos();
 
     return (
         <style.MainFooter>
@@ -19,8 +22,9 @@ export default function Footer ({ socials, name }) {
                 <FooterSocials>
                     <SocialInfos>{t('footer.socials')}</SocialInfos>
                     <SocialsWrapper>
-                        <SocialLink social={socials.linkedin}/>
-                        <SocialLink social={socials.github}/>
+                        {socialsNetwork.map((social, index) => (
+                            <SocialLink key={index} social={social}/>
+                        ))}
                     </SocialsWrapper>
             </FooterSocials>
             </style.MainFooterUpper>

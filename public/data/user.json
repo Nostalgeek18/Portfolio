@@ -1,0 +1,18 @@
+{
+    "user": {
+        "name": "Nazim Mouzaï",
+        "avatar" : "/public/assets/img/avatar4.png",
+        "socialsNetwork" : [
+            {
+                "name":"linkedin",
+                "link":"https://www.linkedin.com/in/nazim-mouza%C3%AF-647a29211/",
+                "srcIcon": "/public/assets/img/linkedin.png"
+            },
+            {
+                "name":"github",
+                "link":"https://github.com/Nostalgeek18",
+                "srcIcon": "/public/assets/img/github-icon.png"
+            }
+        ]
+    }
+}

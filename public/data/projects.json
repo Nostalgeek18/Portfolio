@@ -3,7 +3,7 @@
         {
             "id": 1,
             "tLabelName": "projectOne",
-            "image": "/src/assets/img/quizzImg.png",
+            "image": "/public/assets/img/quizzImg.png",
             "linkInDescription": false,
             "skills": [
                 "HTML",
@@ -12,7 +12,8 @@
                 "React",
                 "GIT",
                 "API",
-                "Responsive"
+                "Responsive",
+                "Vite"
             ],
             "codeSource" : "https://github.com/Nostalgeek18/TriviaQuiz",
             "liveLink" : "https://resplendent-elf-cdcb83.netlify.app/",
@@ -21,7 +22,7 @@
         {
             "id": 2,
             "tLabelName": "projectTwo",
-            "image": "/src/assets/img/portfolio.png",
+            "image": "/public/assets/img/portfolio.png",
             "linkInDescription": "<a href='https://www.rammaheshwari.com/'>Ram Maheshwari</a>",
             "skills": [
                 "HTML",
@@ -33,7 +34,8 @@
                 "JSON",
                 "TypeScript",
                 "Router 6",
-                "i18next"
+                "i18next",
+                "Vite"
             ],
             "codeSource" : "https://github.com/Nostalgeek18/TriviaQuiz",
             "liveLink" : "https://resplendent-elf-cdcb83.netlify.app/",
@@ -42,7 +44,7 @@
         {
             "id": 3,
             "tLabelName": "projectThree",
-            "image": "/src/assets/img/passwordGenerator.png",
+            "image": "/public/assets/img/passwordGenerator.png",
             "linkInDescription": false,
             "skills": [
                 "HTML",

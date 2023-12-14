@@ -1,4 +1,5 @@
 import projectsData from "../../public/data/projects.json"
+import userData from "../../public/data/user.json"
 
 /**
  * Get project data by ID.
@@ -16,4 +17,9 @@ function getAllProjectsDatas() {
     return projectsData.projects;
 }
 
-export { getProjectDatas, getAllProjectsDatas }
+function getUserInfos() {
+    return userData.user
+}
+
+
+export { getProjectDatas, getAllProjectsDatas, getUserInfos }

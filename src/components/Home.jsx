@@ -1,9 +1,12 @@
 import { useContext } from 'react';
 import { AppContext } from '../App';
+import { getUserInfos } from '../tools/mix.ts'
  
- function Home({socialsData}) {
+ function Home() {
 
   const { t } = useContext(AppContext) 
+
+  const { socialsNetwork } = getUserInfos();
 
   return  (
     <section className="home-hero" id="home">
@@ -14,8 +17,9 @@ import { AppContext } from '../App';
         </HomeContent>
         <HomeBottomWidget/>
         <HeroSocials>
-          <HeroSocial social={socialsData.linkedin}/>
-          <HeroSocial social={socialsData.github}/>
+          {socialsNetwork.map((social, index) => (
+              <HeroSocial key={index} social={social}/>
+          ))}
         </HeroSocials>
     </section>
   )
