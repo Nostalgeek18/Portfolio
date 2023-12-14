@@ -3,7 +3,7 @@
         {
             "id": 1,
             "tLabelName": "projectOne",
-            "image": "/public/assets/img/quizzImg.png",
+            "image": "/assets/img/quizzImg.png",
             "linkInDescription": false,
             "skills": [
                 "HTML",
@@ -22,7 +22,7 @@
         {
             "id": 2,
             "tLabelName": "projectTwo",
-            "image": "/public/assets/img/portfolio.png",
+            "image": "/assets/img/portfolio.png",
             "linkInDescription": "<a href='https://www.rammaheshwari.com/'>Ram Maheshwari</a>",
             "skills": [
                 "HTML",
@@ -44,7 +44,7 @@
         {
             "id": 3,
             "tLabelName": "projectThree",
-            "image": "/public/assets/img/passwordGenerator.png",
+            "image": "/assets/img/passwordGenerator.png",
             "linkInDescription": false,
             "skills": [
                 "HTML",
