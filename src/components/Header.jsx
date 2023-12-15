@@ -78,12 +78,12 @@ function HamburgerMenu({ smallMenuActive, toggleSmallMenu }) {
     <div className="header__main-ham-menu-cont" onClick={toggleSmallMenu}>
       {smallMenuActive &&
           <img
-            src="/src/assets/img/ham-menu-close.svg"
+            src="/assets/img/ham-menu-close.svg"
             alt="hamburger menu"
             className={`header__main-ham-menu d-none}`}
           /> ||
         <img
-          src="/src/assets/img/ham-menu.svg"
+          src="/assets/img/ham-menu.svg"
           alt="hamburger menu close"
           className={`header__main-ham-menu-close d-none}`}
         />
