@@ -31,5 +31,6 @@ export const MainFooterRow2 = styled.div`
     max-width: 50rem; 
     @media only screen and (max-width: 56.25em) {
         width: 100%; 
+        padding-bottom: 2rem;
     }
 `

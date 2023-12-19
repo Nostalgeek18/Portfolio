@@ -7,13 +7,22 @@ const height = "40px";
 const backgroundColor = "linear-gradient(135deg, rgba(0, 98, 185, 0.8), rgba(30, 52, 112, 0.8))"; // Modern background color
 const fontColor = "#000"; // Modern font color
 
+
+interface ISelectInterface {
+  active: boolean;
+}
+
+interface ILanguageSwitcherInterface {
+  transform: boolean;
+}
+
 // LanguageSwitcher component
-export const LanguageSwitcher = styled.label`
+export const LanguageSwitcher = styled.label<ILanguageSwitcherInterface>`
   position: relative;
   display: inline-block;
   width: calc(${height} * 2);
   height: ${height};
-  transform: translateY(40%);
+  transform: ${({transform})=>(transform ? 'translateY(40%)' : 'none')};
   transition: transform 0.17s ${speed3};
   cursor: pointer;
 
@@ -25,17 +34,18 @@ export const LanguageSwitcher = styled.label`
 `;
 
 // Select components
-export const Select = styled.span`
+export const Select = styled.span<ISelectInterface>`
   position: absolute;
   font-size: calc(${height} / 2.5);
   top: calc(${height} / 4);
-  color: ${fontColor}; // Use the defined font color
+  color: ${({active}) => (!active ? '#FFF' : fontColor)}; // Use the defined font color or #FFF for better contrast
+  text-transform: uppercase;
 
-  &.fr {
+  &.primaryLanguage {
     left: calc(${height} / 3.5);
   }
 
-  &.en {
+  &.secundaryLanguage {
     right: calc(${height} / 4);
   }
 `;

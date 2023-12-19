@@ -2,6 +2,9 @@
     "user": {
         "name": "Nazim Mouzaï",
         "avatar" : "/assets/img/avatar4.png",
+        "email" : "mouzai.@yahoo.com",
+        "specialities" : ["HTML", "CSS", "JavaScript", "PHP", "TypeScript","React"],
+        "skills" : ["HTML", "CSS", "JavaScript", "React", "TypeScript", "PHP", "SQL", "Git", "Figma", "Agile", "JQuery", "Responsive"],
         "socialsNetwork" : [
             {
                 "name":"linkedin",
@@ -13,6 +16,9 @@
                 "link":"https://github.com/Nostalgeek18",
                 "srcIcon": "/assets/img/github-icon.png"
             }
-        ]
+        ],
+        "primaryLanguage"   : "fr",
+        "secondaryLanguage" : "en"
+        
     }
 }

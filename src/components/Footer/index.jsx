@@ -3,11 +3,11 @@ import { AppContext } from '../../App'
 import { useContext } from 'react'
 import { getUserInfos } from '../../tools/mix.ts'
 
-export default function Footer ({ socials, name }) {
+export default function Footer () {
 
     const { t } = useContext(AppContext) 
 
-    const { socialsNetwork } = getUserInfos();
+    const { socialsNetwork, name } = getUserInfos();
 
     return (
         <style.MainFooter>

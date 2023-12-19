@@ -10,7 +10,7 @@ export default function Main() {
         <Home />
         <Projects />
         <About />
-        <Contact email="mouzai.n@yahoo.com" />
+        <Contact />
       </>
     );
   }

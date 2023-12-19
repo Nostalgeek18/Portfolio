@@ -6,13 +6,13 @@ import { getUserInfos } from '../tools/mix.ts'
 
   const { t } = useContext(AppContext) 
 
-  const { socialsNetwork } = getUserInfos();
+  const { name, socialsNetwork, specialities } = getUserInfos();
 
   return  (
     <section className="home-hero" id="home">
         <HomeContent>
-          <HomeTitle name="Nazim Mouzaï"/>
-          <HomeHeroInfo skills={['HTML', 'CSS', 'JavaScript', 'PHP', 'TypeScript', 'React']}/>
+          <HomeTitle name={name}/>
+          <HomeHeroInfo specialities={specialities}/>
           <HomeCta hrefLink="./#projects"> {t('home.cta')} </HomeCta>
         </HomeContent>
         <HomeBottomWidget/>
@@ -34,7 +34,7 @@ function HomeTitle({ name }) {
   )
 }
 
-function HomeHeroInfo({ skills }) {
+function HomeHeroInfo({ specialities }) {
 
   const { t } = useContext(AppContext);
 
@@ -43,11 +43,13 @@ function HomeHeroInfo({ skills }) {
   // Adaptive appropriate joiner
   const joiner = t('jonction.and');
 
-  // Join the skills using a comma
-  const commaJoinedSkills = skills.slice(0, -1).join(', ');
+  // Join the skills using a comma. All the skill EXCEPT last one.
+  const commaJoinedSkills = specialities.slice(0, -1).join(', ');
+
+  const lastSpeciality = specialities[specialities.length-1]
 
   // Combine the comma-joined skills with the last skill using 'and'
-  const fullLabel = t('home.description') + commaJoinedSkills + SPACE + joiner + SPACE + skills[skills.length - 1] + '.';
+  const fullLabel = t('home.description') + commaJoinedSkills + SPACE + joiner + SPACE + lastSpeciality + '.';
 
   return (
     <div className="home-hero__info">
@@ -90,6 +92,7 @@ function HeroSocials({children}) {
   )
 }
 
+//Hold single social Icon
 function HeroSocial({social}) {
   return (
       <div className="home-hero__social">

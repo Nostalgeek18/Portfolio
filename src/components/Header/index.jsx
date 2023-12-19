@@ -1,13 +1,20 @@
 
 import { useContext, useState } from 'react';
-import { AppContext } from '../App';
-import { LanguageSwitch } from './atoms/LanguageSwitch';
-import { Link } from 'react-router-dom';
-import { getUserInfos } from '../tools/mix.ts'
+import { AppContext } from '../../App'
+import { LanguageSwitch } from '../atoms/LanguageSwitch';
+import { getUserInfos } from '../../tools/mix.ts'
+import * as styled from './style'
 
 // Compound component: Header
-function Header({ headerLinks }) {
+export default function Header() {
 
+  const headerLinks = [
+    { id: 1, anchor: '/#home', text: 'home' },
+    { id: 2, anchor: '/#projects', text: 'projects' },
+    { id: 3, anchor: '/#about', text: 'about' },
+    { id: 4, anchor: '/#contact', text: 'contact' },
+  ];
+  
   const { t, switchLanguage } = useContext(AppContext) 
 
   const [smallMenuActive, setSmallMenuActive] = useState(false)
@@ -19,24 +26,28 @@ function Header({ headerLinks }) {
   const { name, avatar} = getUserInfos();
 
   return (
-      <header className="header">
-        <div className="header__content">
+      <styled.Header>
+        <styled.HeaderContent>
           <Logo 
               src={avatar}
               alt={`${name} avatar`}>
                 {name}
               </Logo> 
-            <Navigation>
+                {/* Desktop menu */}
+            <styled.NavigationUL>
                 <NavigationLink linkData={headerLinks[0]}> {t(`header.${headerLinks[0].text}`)} </NavigationLink>
                 <NavigationLink linkData={headerLinks[1]}> {t(`header.${headerLinks[1].text}`)} </NavigationLink>
                 <NavigationLink linkData={headerLinks[2]}> {t(`header.${headerLinks[2].text}`)} </NavigationLink>
                 <NavigationLink linkData={headerLinks[3]}> {t(`header.${headerLinks[3].text}`)} </NavigationLink>
-                <LanguageSwitch onClick={switchLanguage}></LanguageSwitch>
-            </Navigation>
+                <LanguageSwitch transform={true} onClick={switchLanguage}></LanguageSwitch>
+            </styled.NavigationUL>
+                {/* Mobile menu */}
             <HamburgerMenu toggleSmallMenu={toggleSmallMenu} smallMenuActive={smallMenuActive} onClick={switchLanguage} />
-            <SmallMenu smallMenuActive={smallMenuActive} links={headerLinks} t={t} />
-        </div>
-      </header>
+            <SmallMenu smallMenuActive={smallMenuActive} links={headerLinks} t={t} switchLanguage={switchLanguage}>
+                <LanguageSwitch transform={false}></LanguageSwitch>
+            </SmallMenu>
+        </styled.HeaderContent>
+      </styled.Header>
   );
 }
 
@@ -52,23 +63,14 @@ function Logo({ src, alt, children }) {
   );
 }
 
-// Compound component: Navigation
-function Navigation({children }) {
-  return (
-    <ul className="header__links">
-      {children}
-    </ul>
-  );
-}
-
 function NavigationLink({ linkData, children }) {
   
   return (
-    <li className="header__link-wrapper" key={linkData.id}>
-      <Link to={linkData.anchor} className="header__link">
+    <styled.LinkWrapper key={linkData.id}>
+      <styled.HeaderLink to={linkData.anchor}>
         {children}
-      </Link>
-    </li>
+      </styled.HeaderLink>
+    </styled.LinkWrapper>
   );
 }
 
@@ -76,37 +78,37 @@ function NavigationLink({ linkData, children }) {
 function HamburgerMenu({ smallMenuActive, toggleSmallMenu }) {
   return (
     <div className="header__main-ham-menu-cont" onClick={toggleSmallMenu}>
-      {smallMenuActive &&
+      {smallMenuActive ? (
           <img
             src="/assets/img/ham-menu-close.svg"
             alt="hamburger menu"
             className={`header__main-ham-menu d-none}`}
-          /> ||
+          /> ) : (
         <img
           src="/assets/img/ham-menu.svg"
           alt="hamburger menu close"
           className={`header__main-ham-menu-close d-none}`}
         />
-      }
+      )}
     </div>
   );
 }
 
-// Compound component: SmallMenu (for mobile)
-function SmallMenu({ smallMenuActive, links, t }) {
-  return (
-    <div className={`header__sm-menu ${smallMenuActive ? 'header__sm-menu--active' : ''}`}>
-      <div className="header__sm-menu-content">
-        <ul className="header__sm-menu-links">
-          {links.map((link) => (
-            <li className="header__sm-menu-link" key={link.id}>
-              <Link to={link.anchor}>{t(`header.${link.text}`)}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-}
-
-export { Header, Logo, Navigation, NavigationLink,  HamburgerMenu, SmallMenu };
+function SmallMenu({ smallMenuActive, links, t, children, switchLanguage }) {
+    return (
+      <styled.SmallMenuWrapper smallMenuActive={smallMenuActive}>
+        <styled.SmallMenuContent>
+          <styled.SmallMenuLinks>
+            {links.map((link) => (
+              <styled.SmallMenuLink key={link.id}>
+                <styled.HeaderLink to={link.anchor}>{t(`header.${link.text}`)}</styled.HeaderLink>
+              </styled.SmallMenuLink>
+            ))}
+            <styled.SmallMenuLink>
+                <styled.HeaderLink onClick={switchLanguage}>{children}</styled.HeaderLink>
+            </styled.SmallMenuLink>
+          </styled.SmallMenuLinks>
+        </styled.SmallMenuContent>
+      </styled.SmallMenuWrapper>
+    );
+  }

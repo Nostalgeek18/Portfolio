@@ -3,17 +3,16 @@ import * as style from "./style";
 import { AppContext } from "../../../App"
 
 
-export function LanguageSwitch() {
+export function LanguageSwitch({transform = true}) {
 
-    const {activeLanguage, switchLanguage } = useContext(AppContext)
-
+    const {activeLanguage, switchLanguage, primaryLanguage, secondaryLanguage } = useContext(AppContext)
   
   return (
-    <style.LanguageSwitcher>
-       <input type="checkbox" checked={activeLanguage === "en"} onChange={switchLanguage} />
-      <style.Slider className="round" />
-      <style.Select  className="fr">FR</style.Select>
-      <style.Select  className="en">EN</style.Select>
+    <style.LanguageSwitcher transform={transform}>
+       <input type="checkbox" checked={activeLanguage === secondaryLanguage} onChange={switchLanguage} />
+      <style.Slider  />
+      <style.Select  active={activeLanguage === primaryLanguage} className="primaryLanguage">{primaryLanguage}</style.Select>
+      <style.Select  active={activeLanguage === secondaryLanguage} className="secundaryLanguage">{secondaryLanguage}</style.Select>
     </style.LanguageSwitcher>
   );
 }

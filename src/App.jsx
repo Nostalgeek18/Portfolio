@@ -5,6 +5,7 @@ import PersonnalProjects  from './pages/PersonnalProjects'
 import Layout from "./components/Layout"
 import Main from './pages/Main'
 import ScrollToHashElement from './tools/ScrollToHashElement'
+import { getUserInfos } from './tools/mix'
 
 import './i18n';
 import { useTranslation } from 'react-i18next';
@@ -14,7 +15,9 @@ const AppContext = createContext()
 function App() {
 
   const {t, i18n } = useTranslation()
-  const initialLanguage = localStorage.getItem("language") !== undefined ? localStorage.getItem("language") : "fr"
+
+  const { primaryLanguage, secondaryLanguage } = getUserInfos();
+  const initialLanguage = localStorage.getItem("language") !== undefined ? localStorage.getItem("language") : primaryLanguage
 
   const [activeLanguage, setActiveLanguage] = useState(initialLanguage)
 
@@ -28,26 +31,15 @@ function App() {
   //TODO : Have variable here to have Main and Second language variable from user object.
   function switchLanguage() {
     setActiveLanguage(oldValue => (
-       oldValue == "fr" ? "en" : "fr"
+       oldValue == primaryLanguage ? secondaryLanguage : primaryLanguage
     ))
-  }
-
-  const socialsData = {
-    linkedin : {
-      link : "https://www.linkedin.com/in/nazim-mouza%C3%AF-647a29211/",
-      srcIcon : "./src/assets/img/linkedin.png"
-    },
-    github : {
-      link : "https://github.com/Nostalgeek18",
-      srcIcon : "./src/assets/img/github-icon.png"
-    }
   }
 
 
   return (
     <>
       <BrowserRouter>
-        <AppContext.Provider value={{activeLanguage, switchLanguage, t}}>
+        <AppContext.Provider value={{activeLanguage, switchLanguage, t, primaryLanguage, secondaryLanguage}}>
         <ScrollToHashElement /> {/* Important for scrolling to #id in DOM */}
        <Routes>
         <Route element={<Layout />}>

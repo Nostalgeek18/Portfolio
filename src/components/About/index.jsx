@@ -2,10 +2,13 @@ import { AppContext } from "../../App"
 import { useContext } from "react"
 import * as styled from './style'
 import Skill from "../atoms/Skill"
+import { getUserInfos } from '../../tools/mix.ts'
 
 function About() {
 
     const { t } = useContext(AppContext)
+
+    const { skills } = getUserInfos();
 
     return (
         <section id="about" className="about sec-pad">
@@ -32,18 +35,11 @@ function About() {
                 <ContentSkills>
                     <TitleSkills>{t('about.titleSkills')}</TitleSkills>
                     <SkillsWrapper>
+                        {skills.map((skill, index) => (
+                                <Skill key={index}>{skill}</Skill>
+                            )
+                        )}
                         <Skill>HTML</Skill>
-                        <Skill>CSS</Skill>
-                        <Skill>JavaScript</Skill>
-                        <Skill>React</Skill>
-                        <Skill>TypeScript</Skill>
-                        <Skill>PHP</Skill>
-                        <Skill>SQL</Skill>
-                        <Skill>Git</Skill>
-                        <Skill>Figma</Skill>
-                        <Skill>Agile</Skill>
-                        <Skill>JQuery</Skill>
-                        <Skill>Responsive</Skill>
                     </SkillsWrapper>
                 </ContentSkills>
             </Content>

@@ -1,9 +1,11 @@
 import { AppContext } from "../App"
 import { useContext } from "react"
+import { getUserInfos } from '../tools/mix.ts'
 
-export default function Contact ({email}) {
+export default function Contact () {
 
-  const { t } = useContext(AppContext) 
+  const { t }     = useContext(AppContext) 
+  const { email } = getUserInfos()
 
   return (
     <section id="contact" className="contact sec-pad dynamicBg">
