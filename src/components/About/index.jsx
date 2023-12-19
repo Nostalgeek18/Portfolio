@@ -39,7 +39,6 @@ function About() {
                                 <Skill key={index}>{skill}</Skill>
                             )
                         )}
-                        <Skill>HTML</Skill>
                     </SkillsWrapper>
                 </ContentSkills>
             </Content>
