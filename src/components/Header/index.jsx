@@ -9,12 +9,28 @@ import * as styled from './style'
 export default function Header() {
 
   const headerLinks = [
-    { id: 1, anchor: '/#home', text: 'home' },
-    { id: 2, anchor: '/#projects', text: 'projects' },
-    { id: 3, anchor: '/#about', text: 'about' },
-    { id: 4, anchor: '/#contact', text: 'contact' },
+    { 
+        id: 1,
+        anchor: '/#home',
+        text: 'home'
+    },
+    { 
+        id: 2,
+        anchor: '/#projects',
+        text: 'projects' 
+    },
+    { 
+        id: 3,
+        anchor: '/#about',
+        text: 'about' 
+    },
+    { 
+        id: 4,
+        anchor: '/#contact',
+        text: 'contact' 
+    },
   ];
-  
+
   const { t, switchLanguage } = useContext(AppContext) 
 
   const [smallMenuActive, setSmallMenuActive] = useState(false)
@@ -23,16 +39,19 @@ export default function Header() {
     setSmallMenuActive(oldValue => !oldValue)
   }
 
-  const { name, avatar} = getUserInfos();
+  const { name, avatar, socialsNetwork, ...datasUser} = getUserInfos();
+
+  const linkedinLink = socialsNetwork[0].link;
 
   return (
       <styled.Header>
         <styled.HeaderContent>
-          <Logo 
-              src={avatar}
-              alt={`${name} avatar`}>
-                {name}
-              </Logo> 
+            <styled.LogoContainer>
+                <styled.LogoImgContainer>
+                    <styled.LogoImage src={avatar} alt={`${name} avatar`} className="header__logo-img" />
+                </styled.LogoImgContainer>
+                <styled.LogoLink to={linkedinLink} target="_blank">{name}</styled.LogoLink>
+            </styled.LogoContainer>
                 {/* Desktop menu */}
             <styled.NavigationUL>
                 <NavigationLink linkData={headerLinks[0]}> {t(`header.${headerLinks[0].text}`)} </NavigationLink>
@@ -51,17 +70,6 @@ export default function Header() {
   );
 }
 
-// Compound component: Logo
-function Logo({ src, alt, children }) {
-  return (
-    <div className="header__logo-container">
-      <div className="header__logo-img-cont">
-        <img src={src} alt={alt} className="header__logo-img" />
-      </div>
-      <span className="header__logo-sub">{children}</span>
-    </div>
-  );
-}
 
 function NavigationLink({ linkData, children }) {
   
@@ -94,6 +102,7 @@ function HamburgerMenu({ smallMenuActive, toggleSmallMenu }) {
   );
 }
 
+//Mobile menu
 function SmallMenu({ smallMenuActive, links, t, children, switchLanguage }) {
     return (
       <styled.SmallMenuWrapper smallMenuActive={smallMenuActive}>

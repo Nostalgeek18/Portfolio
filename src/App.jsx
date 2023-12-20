@@ -28,7 +28,6 @@ function App() {
   }, [activeLanguage])
 
 
-  //TODO : Have variable here to have Main and Second language variable from user object.
   function switchLanguage() {
     setActiveLanguage(oldValue => (
        oldValue == primaryLanguage ? secondaryLanguage : primaryLanguage
@@ -40,7 +39,7 @@ function App() {
     <>
       <BrowserRouter>
         <AppContext.Provider value={{activeLanguage, switchLanguage, t, primaryLanguage, secondaryLanguage}}>
-        <ScrollToHashElement /> {/* Important for scrolling to #id in DOM */}
+        <ScrollToHashElement /> {/* Important for scrolling to #id elements in DOM */}
        <Routes>
         <Route element={<Layout />}>
           <Route index element={<Main/>} />

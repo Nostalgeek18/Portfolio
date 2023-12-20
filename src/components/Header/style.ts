@@ -130,3 +130,44 @@ export const SmallMenuContent = styled.div`
 export const SmallMenuLinks = styled.ul`
   /* Styles for .header__sm-menu-links */
 `;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #333;
+  transition: color .3s; 
+     &:hover {
+       color: rgba(var(--main-color), 1)
+     }
+`
+
+export const LogoImgContainer = styled.div`
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-right: 1.5rem;
+  background: rgba(var(--main-color), 1); 
+
+  @media only screen and (max-width: 56.25em) {
+      width: 4.5rem;
+      height: 4.5rem;
+      margin-right: 1.2rem;
+    }
+`
+
+export const LogoLink = styled(Link)`
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+`
+
+export const LogoImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+`

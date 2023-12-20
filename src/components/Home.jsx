@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { AppContext } from '../App';
 import { getUserInfos } from '../tools/mix.ts'
  
- function Home() {
+export default function Home() {
 
   const { t } = useContext(AppContext) 
 
@@ -106,5 +106,3 @@ function HeroSocial({social}) {
     </div>
   )
 }
-
-export { Home, HeroSocials, HeroSocial, HomeCta, HomeContent, HomeBottomWidget, HomeTitle, HomeHeroInfo }
