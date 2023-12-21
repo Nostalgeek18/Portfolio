@@ -49,9 +49,9 @@
             "title": "Quiz App",
             "description":"Quizzie is a simple quiz app that lets you select alternatives and then gives you a score. It's built with functional React components.",
             "overview" : {
-              "firstParagraph"  : "Quizzie",
+              "firstParagraph"  : "Quizzie is a React application built from scratch as part of a React training course. The project's original prerequisites were pretty basic for my taste, so I decided to push it further to make it more complete and to be truly satisfied.",
               "secondParagraph" : "Although a simple transition in itself doesn't necessarily require a great deal of effort, I made the task more complex by aiming to improve much more the project by implementing new functionalities thanks to the panoply of tools available in React. In particular, the ability to add a translation, compartmentalize code into several distinct components, have several pages in SPA, use styled components etc...",
-              "thirdParagraph"  : "My ultimate aim is to make it open-source too, exactly like the original project. But with the addition of my React features to make the project much more powerful and attractive to employers.",
+              "thirdParagraph"  : "With a view to perfecting it, I've implemented several options. Among these, the possibility of choosing your own question theme, the number of questions and, above all, a modern approach by compartmentalizing the questions into different panels. An optimization I didn't see in the dozen or so different projects I consulted from other program participants.",
               "checkLinkParagraph" : "Feel free to consult the source code via the link below. I'd be delighted to hear from you, either for your personal uasge or to give you some advice."
             }
             

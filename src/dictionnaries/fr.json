@@ -51,7 +51,7 @@
       "overview" : {
         "firstParagraph"  : "Quizzie est une application React réalisée à partir de zéro dans le cadre d'une formation React. Les prérequis à l'origine du projet étaient assez basique à mon goût, j'ai finalement décidé de le pousser plus loin pour le rendre plus complet et être réellement satisfait. ",
         "secondParagraph" : "Dans l'optique de le perfectionner, j'y ait implémenté plusieurs options. Notamment la possibilité de choisir son propre thème de questions, le nombre de ceux-ci et surtout une approche moderne en compartiment les questions en différents panels. Une optimisation que je n'ai pas vu dans la dizaine de différents projets que j'ai consulté des autres participants au programme.",
-        "thirdParagraph"  : "Bien que très satisfait du rendu final, je reste toujours ouvert à l'amélioration. ",
+        "thirdParagraph"  : "Although I'm very satisfied with the final result, I'm always open to improvement.",
         "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
       }
      },
