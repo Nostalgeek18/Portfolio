@@ -106,3 +106,5 @@ function HeroSocial({social}) {
     </div>
   )
 }
+
+export { Home, HeroSocials, HeroSocial, HomeCta, HomeContent, HomeBottomWidget, HomeTitle, HomeHeroInfo }

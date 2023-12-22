@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css'
 import PersonnalProjects  from './pages/PersonnalProjects'
 import Layout from "./components/Layout"
+import NotFound from "./components/NotFound"
 import Main from './pages/Main'
 import ScrollToHashElement from './tools/ScrollToHashElement'
 import { getUserInfos } from './tools/mix'
@@ -44,6 +45,7 @@ function App() {
         <Route element={<Layout />}>
           <Route index element={<Main/>} />
           <Route path="/projects/:id" element={<PersonnalProjects/>}/>
+          <Route path="*" element={<NotFound />} /> {/*Page not found */}
         </Route>
       </Routes>
       </AppContext.Provider>

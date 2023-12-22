@@ -45,7 +45,7 @@
         "seeLive": "See live",
         "toolsUsed": "Tools used",
         "overviewTitle": "Overview Project",
-        "projectOne": {
+          "projectOne": {
             "title": "Quiz App",
             "description":"Quizzie is a simple quiz app that lets you select alternatives and then gives you a score. It's built with functional React components.",
             "overview" : {
@@ -53,28 +53,32 @@
               "secondParagraph" : "Although a simple transition in itself doesn't necessarily require a great deal of effort, I made the task more complex by aiming to improve much more the project by implementing new functionalities thanks to the panoply of tools available in React. In particular, the ability to add a translation, compartmentalize code into several distinct components, have several pages in SPA, use styled components etc...",
               "thirdParagraph"  : "With a view to perfecting it, I've implemented several options. Among these, the possibility of choosing your own question theme, the number of questions and, above all, a modern approach by compartmentalizing the questions into different panels. An optimization I didn't see in the dozen or so different projects I consulted from other program participants.",
               "checkLinkParagraph" : "Feel free to consult the source code via the link below. I'd be delighted to hear from you, either for your personal uasge or to give you some advice."
-            }
-            
-        },
-        "projectTwo": {
-            "title": "Portfolio",
-            "description":"This portfolio that you are currently watching comes mainly from an Open Source portfolio coded on HTML, CSS and vanilla JS. I then enhanced it in React and added several features such as translation and routings. I aim to make it Open Source and easy to adapt for anyone who'd like a React portfolio.",
+            } 
+          },
+          "projectTwo": {
+              "title": "Portfolio",
+              "description":"This portfolio that you are currently watching comes mainly from an Open Source portfolio coded on HTML, CSS and vanilla JS. I then enhanced it in React and added several features such as translation and routings. I aim to make it Open Source and easy to adapt for anyone who'd like a React portfolio.",
+              "overview" : {
+                "firstParagraph"  : "This portfolio originally came from an Open-Source project with a neat design, but limited architecture and capabilities due to its deployment in HTML and JavaScript vanilla. With a view to honing my React skills, I migrated the project to React in order to optimize it.",
+                "secondParagraph" : "Although a simple transition in itself doesn't necessarily require a great deal of effort, I made the task more complex by aiming to improve much more the project by implementing new functionalities thanks to the panoply of tools available in React. In particular, the ability to add a translation, compartmentalize code into several distinct components, have several pages in SPA, use styled components etc...",
+                "thirdParagraph"  : "My final desire is to make it open-source too, exactly like the original project. But with the addition of my React features to make the project much more powerful and attractive to employers.",
+                "checkLinkParagraph" : "Feel free to consult the source code via the link below. I'd be delighted to hear from you, either for your personal uasge or to give you some advice."
+              }
+          },
+          "projectThree": {
+            "title": "Password Generator",
+            "description":"Une application responsive qui génère des mots de passe aléatoires en se basant sur quelques données de l'utilisateur. Construite avec HTML, CSS, et JavaScript.",
             "overview" : {
-              "firstParagraph"  : "This portfolio originally came from an Open-Source project with a neat design, but limited architecture and capabilities due to its deployment in HTML and JavaScript vanilla. With a view to honing my React skills, I migrated the project to React in order to optimize it.",
-              "secondParagraph" : "Although a simple transition in itself doesn't necessarily require a great deal of effort, I made the task more complex by aiming to improve much more the project by implementing new functionalities thanks to the panoply of tools available in React. In particular, the ability to add a translation, compartmentalize code into several distinct components, have several pages in SPA, use styled components etc...",
-              "thirdParagraph"  : "My final desire is to make it open-source too, exactly like the original project. But with the addition of my React features to make the project much more powerful and attractive to employers.",
-              "checkLinkParagraph" : "Feel free to consult the source code via the link below. I'd be delighted to hear from you, either for your personal uasge or to give you some advice."
-            }
-        },
-        "projectThree": {
-          "title": "Password Generator",
-          "description":"Une application responsive qui génère des mots de passe aléatoires en se basant sur quelques données de l'utilisateur. Construite avec HTML, CSS, et JavaScript.",
-          "overview" : {
-           "firstParagraph"  : "Le générateur de mot de passe est elle aussi une application basique de générations de mot de passe réalisé à partir de Zéro. Assez modeste, ce projet s'inscrit dans les débuts de ma réapprentissage des technologies Front End.",
-           "secondParagraph" : "Comme elle ne représente que mes débuts en programmation, j'espère tout de même avoir un projet plus développé à l'avenir lorsque l'inspiration se présentera.",
-           "thirdParagraph"  : "",
-           "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
-         }
+            "firstParagraph"  : "Le générateur de mot de passe est elle aussi une application basique de générations de mot de passe réalisé à partir de Zéro. Assez modeste, ce projet s'inscrit dans les débuts de ma réapprentissage des technologies Front End.",
+            "secondParagraph" : "Comme elle ne représente que mes débuts en programmation, j'espère tout de même avoir un projet plus développé à l'avenir lorsque l'inspiration se présentera.",
+            "thirdParagraph"  : "",
+            "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
+          }
       }
-    }
+    },
+    "pageNotFound" : {
+      "title" : "404 Page Not Found",
+      "text" : "The page you are looking for may have been moved, deleted, or possibly never existed",
+      "cta" : "Home page"
+  }
 }
