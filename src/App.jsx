@@ -45,7 +45,7 @@ function App() {
         <Route element={<Layout />}>
           <Route index element={<Main/>} />
           <Route path="/projects/:id" element={<PersonnalProjects/>}/>
-          <Route path="*" element={<NotFound />} /> {/*Page not found */}
+          <Route path="*" element={<NotFound />} /> {/*Handle url not found */}
         </Route>
       </Routes>
       </AppContext.Provider>
