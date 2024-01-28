@@ -5,7 +5,7 @@ const deepBlue = "#1e3470";
 const speed3 = "cubic-bezier(0.26, 0.48, 0.08, 0.9)";
 const height = "40px";
 const backgroundColor = "linear-gradient(135deg, rgba(0, 98, 185, 0.8), rgba(30, 52, 112, 0.8))"; // Modern background color
-const fontColor = "#000"; // Modern font color
+const fontColor = "#000"; 
 
 
 interface ISelectInterface {
@@ -38,7 +38,7 @@ export const Select = styled.span<ISelectInterface>`
   position: absolute;
   font-size: calc(${height} / 2.5);
   top: calc(${height} / 4);
-  color: ${({active}) => (!active ? '#FFF' : fontColor)}; // Use the defined font color or #FFF for better contrast
+  color: ${({active}) => (active ? '#000' : '#FFF')}; 
   text-transform: uppercase;
 
   &.primaryLanguage {
