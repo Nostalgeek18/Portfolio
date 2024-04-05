@@ -43,7 +43,7 @@
         },
         {
             "id": 3,
-            "tLabelName": "projectTwo",
+            "tLabelName": "projectThree",
             "image": "/assets/img/portfolio.png",
             "linkInDescription": "<a href='https://www.rammaheshwari.com/'>Ram Maheshwari</a>",
             "skills": [
@@ -59,8 +59,8 @@
                 "i18next",
                 "Vite"
             ],
-            "codeSource" : "https://github.com/Nostalgeek18/TriviaQuiz",
-            "liveLink" : "https://resplendent-elf-cdcb83.netlify.app/",
+            "codeSource" : "https://github.com/Nostalgeek18/Portfolio",
+            "liveLink" : "https://zesty-crepe-0955fe.netlify.app/",
             "isReact" : true
         }
     ]
