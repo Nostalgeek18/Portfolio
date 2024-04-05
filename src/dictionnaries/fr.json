@@ -56,22 +56,22 @@
         }
       },
       "projectTwo": {
+          "title": "Wild Oasis",
+          "description":"Wild Oasis est une application de gestion hôtelière conviviale. Cette application est conçue pour gérer les opérations de l'hôtel, y compris les statistiques de vente, la gestion des cabines, la gestion des utilisateurs, la gestion des réservations et diverses options de personnalisation. Et bien plus encore !",
+          "overview" : {
+            "firstParagraph"  : "Cette application massive à été réalisé dans au cours d'un projet Udemy, construit à partir de maigres fondations. Quant au reste, l'ensemble des fonctionnalités et de l'architecture à été réalisé étape par étape. Le projet avait pour but d'être très fidèle à une application qu'on pourrait retrouver dans le vrai monde par de vrais entreprises, garantissant donc un design et un UX soigné. ",
+            "secondParagraph" : "En plus de la charge conséquente de travail demandé, ce projet se distingue dans sa polyvalence en devant employer à la fois du front-end et du back-end, toute les données étant générés grâce à des requêtes à une base de données sur supabase. Cela a été un bel exercice afin de me réhabituer à faire travailler ses deux facettes du développement web en harmonie.",
+            "thirdParagraph"  : "Pour vous connecter en tant qu'utilisateur, entrez les identifiants usertest@test.com avec comme mot de passe passworduser.",
+            "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
+          }
+      },
+      "projectThree": {
           "title": "Portfolio",
           "description":"Ce portfolio que vous êtes en train de regarder provient principalement d'un portfolio Open Source codé en HTML, CSS et vanilla JS. Je l'ai par la suite transitionné en React et ajouté plusieurs fonctionnalités telles que la traduction et les routages. Mon but est de le rendre Open Source et facile à adapter pour tous ceux qui voudraient un portfolio en React.",
           "overview" : {
             "firstParagraph"  : "Ce portfolio provient à l'origine d'un projet Open-Source au design soigné, mais à l'architecture et aux capacités limitées en raison de son déploiement en HTML et JavaScript vanille. Dans le but d'affiner mes compétences en React, j'ai migré le projet vers React afin de l'optimiser.",
             "secondParagraph" : "Bien qu'une simple transition en soi ne demande pas forcément beaucoup d'efforts, j'ai complexifié la tâche en visant à améliorer beaucoup plus le projet en implémentant de nouvelles fonctionnalités grâce à la panoplie d'outils disponibles dans React. En particulier, la possibilité d'ajouter une traduction, de compartimenter le code en plusieurs composants distincts, d'avoir plusieurs pages en SPA, d'utiliser des composants stylisés etc...",
             "thirdParagraph"  : "Mon but ultime est de le rendre Open-source, exactement comme le projet original. Mais avec l'ajout de mes fonctionnalités React pour rendre le projet beaucoup plus puissant et attrayant pour les employeurs.",
-            "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
-          }
-      },
-      "projectThree": {
-          "title": "Générateur de mots de passe",
-          "description":"Une application responsive qui génère des mots de passe aléatoires en se basant sur quelques données de l'utilisateur. Construite avec HTML, CSS, et JavaScript.",
-          "overview" : {
-            "firstParagraph"  : "Le générateur de mot de passe est elle aussi une application basique de générations de mot de passe réalisé à partir de Zéro. Assez modeste, ce projet s'inscrit dans les débuts de ma réapprentissage des technologies Front End.",
-            "secondParagraph" : "Comme elle ne représente que mes débuts en programmation, j'espère tout de même avoir un projet plus développé à l'avenir lorsque l'inspiration se présentera.",
-            "thirdParagraph"  : "",
             "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
           }
       }

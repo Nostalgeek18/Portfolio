@@ -3,7 +3,7 @@
         {
             "id": 1,
             "tLabelName": "projectOne",
-            "image": "/assets/img/quizzImg.png",
+            "image": "/public/assets/img/quizzImg.png",
             "linkInDescription": false,
             "skills": [
                 "HTML",
@@ -22,7 +22,29 @@
         {
             "id": 2,
             "tLabelName": "projectTwo",
-            "image": "/assets/img/portfolio.png",
+            "image": "/public/assets/img/wildOasis.png",
+            "linkInDescription": false,
+            "skills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "GIT",
+                "API",
+                "TypeScript",
+                "Router 6",
+                "Node.js",
+                "React Query",
+                "React Hook form"
+            ],
+            "codeSource" : "https://github.com/Nostalgeek18/Wild-Oasis",
+            "liveLink" : "https://wild-oasizs.netlify.app/",
+            "isReact" : true
+        },
+        {
+            "id": 3,
+            "tLabelName": "projectTwo",
+            "image": "/public/assets/img/portfolio.png",
             "linkInDescription": "<a href='https://www.rammaheshwari.com/'>Ram Maheshwari</a>",
             "skills": [
                 "HTML",
@@ -40,22 +62,6 @@
             "codeSource" : "https://github.com/Nostalgeek18/TriviaQuiz",
             "liveLink" : "https://resplendent-elf-cdcb83.netlify.app/",
             "isReact" : true
-        },
-        {
-            "id": 3,
-            "tLabelName": "projectThree",
-            "image": "/assets/img/passwordGenerator.png",
-            "linkInDescription": false,
-            "skills": [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "GIT",
-                "Responsive"
-            ],
-            "codeSource" : "https://github.com/Nostalgeek18/PasswordGenerator",
-            "liveLink" : "https://nostalgeek18.github.io/PasswordGenerator/",
-            "isReact" : false
         }
     ]
 }

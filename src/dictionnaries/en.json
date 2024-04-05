@@ -56,6 +56,16 @@
             } 
           },
           "projectTwo": {
+            "title": "Wild Oasis",
+            "description":"The Wild Oasis is a user friendly hotel management application. This application is designed to manage hotel operations, including sales statistics, cabin management, user management, booking management, and various customization options. And so much more!",
+            "overview" : {
+            "firstParagraph"  : "This massive application was realized in the course of a Udemy project, built from merely nothing. As for the rest, all the functionality and architecture was built step by step. The aim of the project was to be very faithful to an application that could be found in the real world by real companies, thus guaranteeing meticulous design and UX.",
+            "secondParagraph" : "In addition to the heavy workload involved, this project stood out for its versatility, having to employ both front-end and back-end, with all data being generated through queries to a database on supabase. It was a great exercise in getting used to working in harmony with the two facets of web development.",
+            "thirdParagraph"  : "To log in as a user, enter usertest@test.com and passworduser for the credentials.",
+            "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
+          }
+      },
+          "projectThree": {
               "title": "Portfolio",
               "description":"This portfolio that you are currently watching comes mainly from an Open Source portfolio coded on HTML, CSS and vanilla JS. I then enhanced it in React and added several features such as translation and routings. I aim to make it Open Source and easy to adapt for anyone who'd like a React portfolio.",
               "overview" : {
@@ -64,17 +74,7 @@
                 "thirdParagraph"  : "My final desire is to make it open-source too, exactly like the original project. But with the addition of my React features to make the project much more powerful and attractive to employers.",
                 "checkLinkParagraph" : "Feel free to consult the source code via the link below. I'd be delighted to hear from you, either for your personal uasge or to give you some advice."
               }
-          },
-          "projectThree": {
-            "title": "Password Generator",
-            "description":"Une application responsive qui génère des mots de passe aléatoires en se basant sur quelques données de l'utilisateur. Construite avec HTML, CSS, et JavaScript.",
-            "overview" : {
-            "firstParagraph"  : "Le générateur de mot de passe est elle aussi une application basique de générations de mot de passe réalisé à partir de Zéro. Assez modeste, ce projet s'inscrit dans les débuts de ma réapprentissage des technologies Front End.",
-            "secondParagraph" : "Comme elle ne représente que mes débuts en programmation, j'espère tout de même avoir un projet plus développé à l'avenir lorsque l'inspiration se présentera.",
-            "thirdParagraph"  : "",
-            "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
           }
-      }
     },
     "pageNotFound" : {
       "title" : "404 Page Not Found",

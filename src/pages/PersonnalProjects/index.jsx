@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom"
 import { AppContext } from "../../App";
 import { useContext } from "react";
-import { getProjectDatas } from "../../tools/mix.ts"
+import { getProjectsData } from "../../tools/mix.ts"
 import  viteLogo  from '/public/vite.svg'
 // import reactLogo from '../../assets/react.svg'
 import reactLogo from '/public/assets/react.svg'
@@ -14,7 +14,7 @@ export default function PersonnalProjects() {
     //From this id, we'll only have to extract the datas related to that very id. From doing that, we avoid having a page for each project.
     const id = parseInt(useParams().id)
 
-    const {tLabelName, image,skills,codeSource,isReact, liveLink, ...datasProject} = getProjectDatas(id)
+    const {tLabelName, image,skills,codeSource,isReact, liveLink, ...datasProject} = getProjectsData(id)
 
     
     return (
