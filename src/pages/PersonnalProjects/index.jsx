@@ -16,7 +16,6 @@ export default function PersonnalProjects() {
 
     const {tLabelName, image,skills,codeSource,isReact, liveLink, ...datasProject} = getProjectsData(id)
 
-    
     return (
         <>
                 <section className="project-cs-hero">
@@ -76,12 +75,17 @@ export default function PersonnalProjects() {
                             </styled.LogosWrapper> 
                             }
                             <div className="project-details__links">
-                            <h3 className="project-details__content-title">{t('projects.seeLive')}</h3>
-                            <Link
-                                to={codeSource}
-                                className="btn btn--med btn--theme project-details__links-btn"
-                                target="_blank"
-                                >{t('projects.codeSource')}</Link>
+                            {codeSource && 
+                                <>
+                                    <h3 className="project-details__content-title">{t('projects.seeLive')}</h3>
+                                    <Link
+                                        to={codeSource}
+                                        className="btn btn--med btn--theme project-details__links-btn"
+                                        target="_blank"
+                                        >{t('projects.codeSource')}
+                                    </Link>
+                                </>
+                            }
                             <Link
                                 to="/#projects"
                                 className="btn btn--med btn--theme-inv project-details__links-btn"

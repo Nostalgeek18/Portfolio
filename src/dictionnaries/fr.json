@@ -74,7 +74,17 @@
             "thirdParagraph"  : "Mon but ultime est de le rendre Open-source, exactement comme le projet original. Mais avec l'ajout de mes fonctionnalités React pour rendre le projet beaucoup plus puissant et attrayant pour les employeurs.",
             "checkLinkParagraph" : "N'hésitez pas à consulter le code source avec le lien plus bas. Que ce soit pour votre uasge personnal ou apporter conseils, je les recevrai avec grand plaisir."
           }
-      }
+      },
+      "projectFour": {
+        "title": "Manoir Ramezay",
+        "description":"Le Manoir Ramezay est un somptueux manoir situé au Québec. J'ai été missionné par leur direction pour une refonte et une modernisation de leur site, à moi seul.",
+        "overview" : {
+          "firstParagraph"  : "Seul développeur de ce vaste chantier, j'ai eu la charge entière de la réforme du site web avec comme seul cap le nouveau design du siteweb sur Figma. ",
+          "secondParagraph" : "À ce jour mon mandat freelance le plus important, je tire beaucoup de fierté et de satisfaction à avoir porté jusqu'au bout ce long projet et avoir endossé seul les difficultés et les complications techniques au cours de route, démontrant mon autonomie possible dans le développement web.",
+          "thirdParagraph"  : "À la demande de mon employeur, ce site web est resté sur des langages modernes avec HTML, CSS, JavaScript et PHP comme sa précédante version. ",
+          "checkLinkParagraph" : "Pour des raisons de sécurité, je préfère ne pas dévoiler publiquement le code source. "
+        }
+    }
   },
     "pageNotFound" : {
       "title" : "404 Page introuvable",

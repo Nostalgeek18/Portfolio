@@ -74,7 +74,17 @@
                 "thirdParagraph"  : "My final desire is to make it open-source too, exactly like the original project. But with the addition of my React features to make the project much more powerful and attractive to employers.",
                 "checkLinkParagraph" : "Feel free to consult the source code via the link below. I'd be delighted to hear from you, either for your personal uasge or to give you some advice."
               }
-          }
+          },
+          "projectFour": {
+            "title": "Manoir Ramezay",
+            "description":"The Manoir Ramezay is a somptuous manor located in Quebec. I was missioning from their management to single-handedly refactor and modernize their website.",
+            "overview" : {
+              "firstParagraph"  : "As the sole developer on this vast project, I was entirely in charge of redesigning the website, with the mission to follow the figma's website with a functional website.",
+              "secondParagraph" : "My most important freelance assignment to date, I take great pride and satisfaction in having seen this long project through to the end, and in having single-handedly taken on the technical difficulties and complications along the way, demonstrating the autonomy I can bring to web development.",
+              "thirdParagraph"  : "At my employer's request, this website is still based on modern languages with HTML, CSS, JavaScript and PHP, just like its predecessor.",
+              "checkLinkParagraph" : "For security reasons, I prefer not to publicly disclose the source code. "
+            }
+        }
     },
     "pageNotFound" : {
       "title" : "404 Page Not Found",
