@@ -84,6 +84,16 @@
           "thirdParagraph"  : "À la demande de mon employeur, ce site web est resté sur des langages modernes avec HTML, CSS, JavaScript et PHP comme sa précédante version. ",
           "checkLinkParagraph" : "Pour des raisons de sécurité, je préfère ne pas dévoiler publiquement le code source. Mais n'hésitez pas à me demander la moindre question vis-à-vis le projet si vous en avez ! "
         }
+    },
+    "projectFive": {
+      "title": "Notion made easy",
+      "description":"Notion Made Easy est le fruit d'une commande missionnée par un consultant Notion souhaitant vendre et diffuser ses produits sur un site web personnalisé.",
+      "overview" : {
+        "firstParagraph"  : "Seul développeur d'un vaste réseau basé en React à partir de rien, ce eCommerce contient des connexions API, des composants réutilisables et responsive, des google trackers et même un CMS fait maison sur un URL externe pouvant mettre à jour le site web. ",
+        "secondParagraph" : "À ce jour ma réalisation personnelle la plus conséquente, je tire beaucoup de fierté et de satisfaction à avoir porté jusqu'au bout ce projet en dépassant mes conceptions du possible vis-à-vis mes propres compétences.",
+        "thirdParagraph"  : "",
+        "checkLinkParagraph" : "Pour des raisons de sécurité, je préfère ne pas dévoiler publiquement le code source. Mais n'hésitez pas à me demander la moindre question vis-à-vis le projet si vous en avez ! Je peux également apporter des détails concernant le CMS. "
+      }
     }
   },
     "pageNotFound" : {

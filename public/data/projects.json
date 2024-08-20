@@ -1,10 +1,35 @@
 {
     "projects" : [
         {
+            "id": 5,
+            "tLabelName": "projectFive",
+            "image": "/assets/img/notionmadeeasy.png",
+            "linkInDescription": "",
+            "skills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "SQL",
+                "Supabase",
+                "Tanstack",
+                "Google Analytics (GA4)",
+                "GIT",
+                "API",
+                "JSON",
+                "Web structure",
+                "Responsive design",
+                "Project management"
+            ],
+            "codeSource" : false,
+            "liveLink" : "https://notionmadeeasy.co/",
+            "isReact" : true
+        },
+        {
             "id": 4,
             "tLabelName": "projectFour",
             "image": "/assets/img/manoirRamezay.png",
-            "linkInDescription": "<a href='https://www.rammaheshwari.com/'>Ram Maheshwari</a>",
+            "linkInDescription": "",
             "skills": [
                 "HTML",
                 "CSS",

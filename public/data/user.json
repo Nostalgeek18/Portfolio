@@ -4,7 +4,7 @@
         "avatar" : "/assets/img/avatar4.png",
         "email" : "mouzai.n@yahoo.com",
         "specialities" : ["HTML", "CSS", "JavaScript", "PHP", "TypeScript","React"],
-        "skills" : ["HTML", "CSS", "JavaScript", "React", "TypeScript", "PHP", "SQL", "Git", "Figma", "Agile", "JQuery", "Responsive"],
+        "skills" : ["HTML", "CSS", "JavaScript", "React", "Redux", "TypeScript", "PHP", "SQL", "supabase", "Git", "Figma", "Agile", "JQuery", "Responsive", "Google Analytics"],
         "socialsNetwork" : [
             {
                 "name":"linkedin",

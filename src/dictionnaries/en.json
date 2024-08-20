@@ -84,6 +84,16 @@
               "thirdParagraph"  : "At my employer's request, this website is still based on modern languages with HTML, CSS, JavaScript and PHP, just like its predecessor.",
               "checkLinkParagraph" : "For security reasons, I prefer not to publicly disclose the source code. But feel free to ask any questions regarding the project if you have some ! "
             }
+        },
+        "projectFive": {
+          "title": "Notion made easy",
+          "description":"Notion Made Easy was commissioned by a Notion consultant who wanted to sell and distribute his products via a personalized website.",
+          "overview" : {
+            "firstParagraph"  : "The sole developer of a vast React-based network from scratch, this eCommerce contains API connections, reusable and responsive components, google trackers and even a home-made CMS on an external URL that can update the website. ",
+            "secondParagraph" : "To date, this has been my most significant personal achievement, and I take great pride and satisfaction in having brought this project to fruition, surpassing my conceptions of what was possible in terms of my own skills.",
+            "thirdParagraph"  : "",
+            "checkLinkParagraph" : "For security reasons, I prefer not to make the source code public. But don't hesitate to ask me any questions you may have about the project! I can also provide details about the CMS. "
+          }
         }
     },
     "pageNotFound" : {
